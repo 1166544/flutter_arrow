@@ -8,10 +8,7 @@ module.exports = {
 			{
 				exclude: /(node_modules|app-server.js)/,
 				loader: 'babel'
-			},
-            {
-                test: /\.css$/, loader: 'style!css'
-            }
+			}
 		]
 	}
 };
