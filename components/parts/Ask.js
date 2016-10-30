@@ -1,31 +1,32 @@
-var React = require('react');
-var Display = require('./Display');
+import React from 'react';
+import Display from './Display';
 
-var Ask = React.createClass({
+class Ask extends React.Component {
 
-	getInitialState() {
-		return {
+	constructor() {
+        super();
+		this.state = {
 			choices: [],
 			answer: undefined
 		};
-	},
+	}
 
 	componentWillMount() {
 		this.setUpChoices();
-	},
+	}
 
 	componentWillReceiveProps() {
 		this.setUpChoices();
-	},
+	}
 
 	setUpChoices() {
-		var choices = Object.keys(this.props.question);
+		const choices = Object.keys(this.props.question);
 		choices.shift();
 		this.setState({ 
 			choices: choices,
 			answer: sessionStorage.answer
 		});
-	},
+	}
 
 	select(choice) {
 		this.setState({ answer: choice });
@@ -34,11 +35,11 @@ var Ask = React.createClass({
 			question: this.props.question,
 			choice: choice
 		});
-	},
+	}
 
 	addChoiceButton(choice, i) {
 
-		var buttonTypes = ['primary', 'success', 'warning', 'danger'];
+		const buttonTypes = ['primary', 'success', 'warning', 'danger'];
 
 		return (
 			<button key={i} 
@@ -47,7 +48,7 @@ var Ask = React.createClass({
 				{choice}: {this.props.question[choice]}
 			</button>
 		);
-	},
+	}
 
 	render() {
 		return (
@@ -68,7 +69,11 @@ var Ask = React.createClass({
 			</div>
 		);
 	}
+}
 
-});
+Ask.propTypes = {
+    question: React.PropTypes.object.isRequired,
+    emit: React.PropTypes.func.isRequired
+}
 
 module.exports = Ask;
