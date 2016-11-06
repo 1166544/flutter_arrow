@@ -1,6 +1,6 @@
-var React = require('react');
+import React from 'react';
 
-var Attendance = React.createClass({
+class Attendance extends React.Component {
 
 	addMemberRow(member, i) {
 		return (
@@ -9,7 +9,7 @@ var Attendance = React.createClass({
 				<td>{member.id}</td>
 			</tr>
 		);
-	},
+	}
 
 	render() {
 		return (
@@ -23,14 +23,16 @@ var Attendance = React.createClass({
 						</tr>
 					</thead>
 					<tbody>
-
 						{this.props.audience.map(this.addMemberRow)}
-
 					</tbody>
 				</table>
 			</div>
 		);
 	}
-});
+}
+
+Attendance.propTypes = {
+  audience: React.PropTypes.array.isRequired
+};
 
 module.exports = Attendance;
