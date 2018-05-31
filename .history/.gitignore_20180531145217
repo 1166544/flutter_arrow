@@ -7,4 +7,3 @@ node_modules
 Thumbs.db
 .project
 .iml
-package-lock.json
