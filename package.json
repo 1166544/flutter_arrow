@@ -10,11 +10,13 @@
   "license": "ISC",
   "private": true,
   "scripts": {
-    "start": "egg-bin dev --cluster --sticky",
+    "start": "egg-scripts start --sticky",
+    "serve": "egg-bin dev --cluster --sticky",
     "test": "node test/client.js"
   },
   "dependencies": {
     "egg": "^2.0.0",
+    "egg-scripts": "^2.6.0",
     "egg-socket.io": "^4.0.0",
     "socket.io-client": "^2.0.1"
   },

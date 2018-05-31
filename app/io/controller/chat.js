@@ -19,6 +19,19 @@ module.exports = app => {
       this.ctx.socket.emit('res', say);
     }
 
+    async ping() {
+      const message = this.ctx.args[0];
+      await this.ctx.socket.emit('res', `Hi! I've got your message: ${message}`);
+    }
+
+    /**
+     * 断开连接处理
+     */
+    async disconnect() {
+      const message = this.ctx.args[0];
+      console.log(message);
+    }
+
   }
 
   return Controller;

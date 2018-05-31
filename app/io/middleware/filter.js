@@ -1,11 +1,14 @@
 'use strict';
 
 /**
- * 过滤器
+ * 包中间件
  */
 module.exports = () => {
   return async (ctx, next) => {
     
+    // 告诉客户端收到信息
+    ctx.socket.emit('res', 'packet received!');
+
     // 输出当前包信息
     console.log('the package is:', ctx.packet);
     
