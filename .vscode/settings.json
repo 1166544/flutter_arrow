@@ -1,3 +1,18 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        ".history": true,
+        ".idea": true,
+        ".vscode": true,
+        "_mock": true,
+        "_nginx": true,
+        "run": true,
+        "logs": true,
+        "package-lock.json": true,
+    },
 }

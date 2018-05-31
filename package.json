@@ -10,7 +10,8 @@
   "license": "ISC",
   "private": true,
   "scripts": {
-    "start": "egg-bin dev --cluster --sticky"
+    "start": "egg-bin dev --cluster --sticky",
+    "test": "node test/client.js"
   },
   "dependencies": {
     "egg": "^2.0.0",

@@ -6,5 +6,6 @@ module.exports = app => {
       return 'Hello Man!';
     }
   }
+  
   return User;
 };

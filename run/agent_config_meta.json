@@ -1,0 +1,266 @@
+{
+  "io": {
+    "namespace": {
+      "/": {
+        "connectionMiddleware": "D:\\GithubPanel\\egg-socket.io-isomorphism\\config\\config.default.js",
+        "packetMiddleware": "D:\\GithubPanel\\egg-socket.io-isomorphism\\config\\config.default.js"
+      },
+      "/chat": {
+        "connectionMiddleware": "D:\\GithubPanel\\egg-socket.io-isomorphism\\config\\config.default.js",
+        "packetMiddleware": "D:\\GithubPanel\\egg-socket.io-isomorphism\\config\\config.default.js"
+      }
+    },
+    "init": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-socket.io\\config\\config.default.js"
+  },
+  "keys": "D:\\GithubPanel\\egg-socket.io-isomorphism\\config\\config.default.js",
+  "session": {
+    "maxAge": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-session\\config\\config.default.js"
+  },
+  "security": {
+    "domainWhiteList": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js",
+    "protocolWhiteList": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js",
+    "defaultMiddleware": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js",
+    "csrf": {
+      "enable": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js",
+      "useSession": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js",
+      "ignoreJSON": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js",
+      "cookieName": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js",
+      "sessionName": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js",
+      "headerName": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js",
+      "bodyName": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js",
+      "queryName": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "xframe": {
+      "enable": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "hsts": {
+      "enable": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.local.js",
+      "maxAge": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js",
+      "includeSubdomains": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "dta": {
+      "enable": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "noopen": {
+      "enable": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "nosniff": {
+      "enable": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "xssProtection": {
+      "enable": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "csp": {
+      "enable": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js",
+      "policy": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js",
+      "checkAddress": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js"
+    }
+  },
+  "helper": {
+    "shtml": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-security\\config\\config.default.js"
+  },
+  "jsonp": {
+    "limit": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "callback": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "csrf": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-jsonp\\config\\config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-onerror\\config\\config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-i18n\\config\\config.default.js",
+    "dirs": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-i18n\\config\\config.default.js",
+    "queryField": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieField": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-i18n\\config\\config.default.js"
+  },
+  "watcher": {
+    "type": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-watcher\\config\\config.local.js",
+    "eventSources": {
+      "default": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-watcher\\config\\config.default.js",
+      "development": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-watcher\\config\\config.default.js"
+    }
+  },
+  "multipart": {
+    "autoFields": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-multipart\\config\\config.default.js",
+    "defaultCharset": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldSize": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fields": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileSize": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-multipart\\config\\config.default.js",
+    "files": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileExtensions": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-multipart\\config\\config.default.js",
+    "whitelist": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-multipart\\config\\config.default.js"
+  },
+  "development": {
+    "watchDirs": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-development\\config\\config.default.js",
+    "ignoreDirs": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-development\\config\\config.default.js",
+    "fastReady": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-development\\config\\config.default.js",
+    "reloadOnDebug": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideDefault": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-development\\config\\config.default.js"
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-schedule\\config\\config.default.js",
+      "file": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-schedule\\config\\config.default.js"
+    }
+  },
+  "logrotator": {
+    "filesRotateByHour": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFiles": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxDays": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-logrotator\\config\\config.default.js"
+  },
+  "static": {
+    "prefix": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-static\\config\\config.default.js",
+    "dir": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-static\\config\\config.default.js",
+    "dynamic": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-static\\config\\config.default.js",
+    "preload": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-static\\config\\config.default.js",
+    "buffer": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-static\\config\\config.default.js",
+    "maxFiles": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-static\\config\\config.default.js"
+  },
+  "view": {
+    "root": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-view\\config\\config.local.js",
+    "defaultExtension": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-view\\config\\config.default.js",
+    "defaultViewEngine": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-view\\config\\config.default.js",
+    "mapping": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-view\\config\\config.default.js"
+  },
+  "env": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+  "name": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+  "proxy": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+  "protocolHeaders": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+  "ipHeaders": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+  "hostHeaders": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+  "pkg": {
+    "name": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "version": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "description": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "author": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "repository": {
+      "type": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+      "url": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js"
+    },
+    "license": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "private": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "scripts": {
+      "start": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js"
+    },
+    "dependencies": {
+      "egg": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+      "egg-socket.io": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+      "socket.io-client": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js"
+    },
+    "devDependencies": {
+      "co-mocha": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+      "egg-bin": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+      "mocha": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "baseDir": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+  "HOME": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+  "rundir": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+  "dump": {
+    "ignore": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "notFound": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "sitefile": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "middlewares": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "httpClient": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js"
+  },
+  "bodyParser": {
+    "enable": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "formLimit": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "jsonLimit": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "strict": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "queryString": {
+      "arrayLimit": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+      "depth": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+      "parameterLimit": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "logger": {
+    "dir": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "env": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "level": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "consoleLevel": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "outputJSON": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "buffer": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "appLogName": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "coreLogName": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "agentLogName": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "errorLogName": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "coreLogger": {
+      "consoleLevel": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.local.js"
+    },
+    "allowDebugAtProd": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheMaxAge": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "request": {
+      "timeout": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketKeepAliveTimeout": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketKeepAliveTimeout": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "logging": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js"
+  },
+  "coreMiddleware": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+  "workerStartTimeout": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+      "port": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+      "hostname": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js",
+    "responseTimeout": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js"
+  },
+  "onClientError": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\config.default.js"
+}
