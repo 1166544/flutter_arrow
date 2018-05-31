@@ -1,7 +1,14 @@
 {
   "name": "socket.io-example",
   "version": "1.0.0",
-  "description": "",
+  "description": "egg-socket.io-isomorphism",
+  "author": "James Liauw",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamesliauw/egg-socket.io-isomorphism.git"
+  },
+  "license": "ISC",
+  "private": true,
   "scripts": {
     "start": "egg-bin dev --cluster --sticky"
   },
@@ -11,6 +18,8 @@
     "socket.io-client": "^2.0.1"
   },
   "devDependencies": {
-    "egg-bin": "^4.3.6"
+    "co-mocha": "^1.2.2",
+    "egg-bin": "^4.3.6",
+    "mocha": "^5.2.0"
   }
 }
