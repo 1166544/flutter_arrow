@@ -11,7 +11,6 @@
         ".vscode": true,
         "_mock": true,
         "_nginx": true,
-        "run": true,
         "logs": true,
         "package-lock.json": true,
     },

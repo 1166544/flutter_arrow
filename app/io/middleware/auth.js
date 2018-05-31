@@ -8,13 +8,14 @@ module.exports = () => {
   return async (ctx, next) => {
     
     // 输出连接信息
-    ctx.socket.emit('res', 'connected!');
+    // ctx.socket.emit('res', '建立连接');
+    console.log('建立连接');
 
     // 从服务层拿信息
-    const say = await ctx.service.user.say();
+    // const say = await ctx.service.user.say();
 
     // 向客户端发送信息
-    ctx.socket.emit('res', 'auth!' + say);
+    // ctx.socket.emit('res', 'auth!' + say);
     
     // 处理下一条请求
     await next();

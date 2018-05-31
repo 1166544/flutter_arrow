@@ -5,12 +5,12 @@
  * @param {*} app 
  */
 module.exports = app => {
-  // app.io.of('/')
-  app.io.route('chat', app.io.controller.chat.index);
+  // 默认消息处理 app.io.of('/')
+  app.io.route('chat', app.io.controller.chat.ping);
 
-  // app.io.of('/chat')
+  // 消息转发处理 app.io.of('/chat')
   app.io.of('/chat').route('chat', app.io.controller.chat.ping);
 
-  // app.io.of('/disconnect')
+  // 断开连接处理 app.io.of('/disconnect')
   app.io.route('disconnect', app.io.controller.chat.disconnect);
 };

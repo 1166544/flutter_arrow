@@ -95,6 +95,7 @@
         "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-i18n\\config\\locales",
         "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-watcher\\config\\locales",
         "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-multipart\\config\\locales",
+        "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-development\\config\\locales",
         "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-schedule\\config\\locales",
         "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-logrotator\\config\\locales",
         "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-static\\config\\locales",
@@ -109,7 +110,7 @@
       "functionName": "__"
     },
     "watcher": {
-      "type": "default",
+      "type": "development",
       "eventSources": {
         "default": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-watcher\\lib\\event-sources\\default",
         "development": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-watcher\\lib\\event-sources\\development"
@@ -126,10 +127,17 @@
       "fileExtensions": [],
       "whitelist": null
     },
+    "development": {
+      "watchDirs": [],
+      "ignoreDirs": [],
+      "fastReady": false,
+      "reloadOnDebug": true,
+      "overrideDefault": false
+    },
     "customLogger": {
       "scheduleLogger": {
         "consoleLevel": "NONE",
-        "file": "C:\\Users\\Administrator\\logs\\socket.io-example\\egg-schedule.log"
+        "file": "D:\\GithubPanel\\egg-socket.io-isomorphism\\logs\\socket.io-example\\egg-schedule.log"
       }
     },
     "logrotator": {
@@ -146,14 +154,13 @@
       "dir": "D:\\GithubPanel\\egg-socket.io-isomorphism\\app\\public",
       "dynamic": true,
       "preload": false,
-      "buffer": true,
+      "buffer": false,
       "maxFiles": 1000,
-      "maxAge": 31536000,
       "files": "<LRU>"
     },
     "view": {
       "root": "D:\\GithubPanel\\egg-socket.io-isomorphism\\app\\view",
-      "cache": true,
+      "cache": false,
       "defaultExtension": ".html",
       "defaultViewEngine": "",
       "mapping": {}
@@ -178,16 +185,10 @@
             "auth"
           ],
           "packetMiddleware": []
-        },
-        "redis": {
-          "host": "redis.wtoipapi.com",
-          "port": 6379,
-          "auth_pass": "D3arR=6RXzddp6QY",
-          "db": 0
         }
       }
     },
-    "env": "prod",
+    "env": "local",
     "name": "socket.io-example",
     "keys": "<String len: 3>",
     "proxy": false,
@@ -207,7 +208,7 @@
       "private": true,
       "scripts": {
         "start": "egg-scripts start --sticky",
-        "dev": "egg-bin dev --cluster --sticky",
+        "serve": "egg-bin dev --cluster --sticky",
         "test": "node test/client.js"
       },
       "dependencies": {
@@ -255,19 +256,21 @@
       "returnRawBody": true
     },
     "logger": {
-      "dir": "C:\\Users\\Administrator\\logs\\socket.io-example",
+      "dir": "D:\\GithubPanel\\egg-socket.io-isomorphism\\logs\\socket.io-example",
       "encoding": "utf8",
-      "env": "prod",
+      "env": "local",
       "level": "INFO",
       "consoleLevel": "INFO",
-      "disableConsoleAfterReady": true,
+      "disableConsoleAfterReady": false,
       "outputJSON": false,
       "buffer": true,
       "appLogName": "socket.io-example-web.log",
       "coreLogName": "egg-web.log",
       "agentLogName": "egg-agent.log",
       "errorLogName": "common-error.log",
-      "coreLogger": {},
+      "coreLogger": {
+        "consoleLevel": "WARN"
+      },
       "allowDebugAtProd": true,
       "type": "application"
     },
@@ -418,6 +421,21 @@
       "from": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\plugin.js",
       "path": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-multipart",
       "version": "2.0.0"
+    },
+    "development": {
+      "enable": true,
+      "package": "egg-development",
+      "name": "development",
+      "dependencies": [
+        "watcher"
+      ],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\GithubPanel\\egg-socket.io-isomorphism\\node_modules\\egg-development",
+      "version": "2.2.0"
     },
     "schedule": {
       "enable": true,
