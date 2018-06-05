@@ -9,5 +9,4 @@ Thumbs.db
 .iml
 package-lock.json
 .history
-app/public
 run
