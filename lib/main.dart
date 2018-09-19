@@ -11,7 +11,8 @@ import 'package:flutter/material.dart';
 // import './listview/ListItem.dart';
 // import './listview/ListGrid.dart';
 // import './getsures//GestureTabsApp.dart';
-import './getsures//GestureMaterialApp.dart';
+// import './getsures//GestureMaterialApp.dart';
+import './getsures//GestureDismissibleApp.dart';
 
 // 创建不同类型子项的List
 // void main() => runApp(new ListCustomItemViewApp(
@@ -34,6 +35,13 @@ import './getsures//GestureMaterialApp.dart';
 // }
 
 // 处理点击-水波效果
+// void main() {
+// 	runApp(new GestureMaterialApp());
+// }
+
+// 实现滑动关闭
 void main() {
-	runApp(new GestureMaterialApp());
+	runApp(new GestureDismissibleApp(
+		items: new List<String>.generate(20, (i) => 'Item ${i + 1}')
+	));
 }
