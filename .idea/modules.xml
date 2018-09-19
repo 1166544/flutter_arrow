@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Polling-App-with-Socket-IO.iml" filepath="$PROJECT_DIR$/.idea/Polling-App-with-Socket-IO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flutter_arrow.iml" filepath="$PROJECT_DIR$/flutter_arrow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flutter_arrow_android.iml" filepath="$PROJECT_DIR$/flutter_arrow_android.iml" />
     </modules>
   </component>
 </project>
