@@ -13,7 +13,8 @@ import 'package:flutter/material.dart';
 // import './getsures//GestureTabsApp.dart';
 // import './getsures//GestureMaterialApp.dart';
 // import './getsures//GestureDismissibleApp.dart';
-import './image/ImageFadingApp.dart';
+// import './image/ImageFadingApp.dart';
+import './image/ImageCachedApp.dart';
 
 // 创建不同类型子项的List
 // void main() => runApp(new ListCustomItemViewApp(
@@ -48,6 +49,11 @@ import './image/ImageFadingApp.dart';
 // }
 
 // 占位符图片
+// void main() {
+// 	runApp(new ImageFadingApp());
+// }
+
+// 使用缓存图片
 void main() {
-	runApp(new ImageFadingApp());
+	runApp(new ImageCachedApp());
 }
