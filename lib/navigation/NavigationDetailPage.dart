@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './NavigationTodo.dart';
 
+/// 子页面
 class NavigationDetailPage extends StatelessWidget {
 	final NavigationTodo todo;
 

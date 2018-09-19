@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './NavigationTodo.dart';
 import './NavigationDetailPage.dart';
 
+/// 父页面
 class NavigationPassingData extends StatelessWidget {
 	final List<NavigationTodo> todos;
 
@@ -18,9 +19,10 @@ class NavigationPassingData extends StatelessWidget {
 				itemCount: todos.length,
 				itemBuilder: (context, index) {
 					return new ListTile(
-						title: new Text(todos[index].title),
+						title: new Text('This is Generate ${todos[index].title}'),
 
 						// 实现ListTile的onTap回调。 在onTap回调中，将再次调用Navigator.push方法
+						// 实现往子页面传值
 						onTap: () {
 							Navigator.push(context, new MaterialPageRoute(
 								builder: (context) => new NavigationDetailPage(todo: todos[index])
