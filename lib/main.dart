@@ -12,7 +12,8 @@ import 'package:flutter/material.dart';
 // import './listview/ListGrid.dart';
 // import './getsures//GestureTabsApp.dart';
 // import './getsures//GestureMaterialApp.dart';
-import './getsures//GestureDismissibleApp.dart';
+// import './getsures//GestureDismissibleApp.dart';
+import './image/ImageFadingApp.dart';
 
 // 创建不同类型子项的List
 // void main() => runApp(new ListCustomItemViewApp(
@@ -40,8 +41,13 @@ import './getsures//GestureDismissibleApp.dart';
 // }
 
 // 实现滑动关闭
+// void main() {
+// 	runApp(new GestureDismissibleApp(
+// 		items: new List<String>.generate(20, (i) => 'Item ${i + 1}')
+// 	));
+// }
+
+// 占位符图片
 void main() {
-	runApp(new GestureDismissibleApp(
-		items: new List<String>.generate(20, (i) => 'Item ${i + 1}')
-	));
+	runApp(new ImageFadingApp());
 }
