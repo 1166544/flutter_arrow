@@ -15,7 +15,9 @@ import 'package:flutter/material.dart';
 // import './getsures//GestureDismissibleApp.dart';
 // import './image/ImageFadingApp.dart';
 // import './image/ImageCachedApp.dart';
-import './navigation/NavigationBasicApp.dart';
+// import './navigation/NavigationBasicApp.dart';
+import './navigation/NavigationTodo.dart';
+import './navigation/NavigationPassingData.dart';
 
 // 创建不同类型子项的List
 // void main() => runApp(new ListCustomItemViewApp(
@@ -60,9 +62,22 @@ import './navigation/NavigationBasicApp.dart';
 // }
 
 // 导航到新页面并返回
+// void main() {
+// 	runApp(new MaterialApp(
+// 		title: 'Navigation Basics',
+// 		home: new NavigationBasicApp()
+// 	));
+// }
+
+// 导航到新面并传值
 void main() {
-	runApp(new MaterialApp(
-		title: 'Navigation Basics',
-		home: new NavigationBasicApp()
-	));
+	runApp(
+		new MaterialApp(
+			title: 'Padding data',
+			home: new NavigationPassingData(
+				// 生成20个待办事项并使用ListView显示它们
+				todos: new List.generate(20, (i) => new NavigationTodo('Todo $i', 'A description of what needs to be done for Todo $i'))
+			)
+		)
+	);
 }
