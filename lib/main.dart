@@ -14,7 +14,8 @@ import 'package:flutter/material.dart';
 // import './getsures//GestureMaterialApp.dart';
 // import './getsures//GestureDismissibleApp.dart';
 // import './image/ImageFadingApp.dart';
-import './image/ImageCachedApp.dart';
+// import './image/ImageCachedApp.dart';
+import './navigation/NavigationBasicApp.dart';
 
 // 创建不同类型子项的List
 // void main() => runApp(new ListCustomItemViewApp(
@@ -54,6 +55,14 @@ import './image/ImageCachedApp.dart';
 // }
 
 // 使用缓存图片
+// void main() {
+// 	runApp(new ImageCachedApp());
+// }
+
+// 导航到新页面并返回
 void main() {
-	runApp(new ImageCachedApp());
+	runApp(new MaterialApp(
+		title: 'Navigation Basics',
+		home: new NavigationBasicApp()
+	));
 }
