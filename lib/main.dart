@@ -16,8 +16,9 @@ import 'package:flutter/material.dart';
 // import './image/ImageFadingApp.dart';
 // import './image/ImageCachedApp.dart';
 // import './navigation/NavigationBasicApp.dart';
-import './navigation/NavigationTodo.dart';
-import './navigation/NavigationPassingData.dart';
+// import './navigation/NavigationTodo.dart';
+// import './navigation/NavigationPassingData.dart';
+import './navigation/NavigationHomeScreenApp.dart';
 
 // 创建不同类型子项的List
 // void main() => runApp(new ListCustomItemViewApp(
@@ -65,20 +66,30 @@ import './navigation/NavigationPassingData.dart';
 // void main() {
 // 	runApp(new MaterialApp(
 // 		title: 'Navigation Basics',
+// 		debugShowCheckedModeBanner: false,
 // 		home: new NavigationBasicApp()
 // 	));
 // }
 
 // 导航到新面并传值
+// void main() {
+// 	runApp(
+// 		new MaterialApp(
+// 			title: 'Padding data',
+// 			debugShowCheckedModeBanner: false,
+// 			home: new NavigationPassingData(
+// 				// 生成20个待办事项并使用ListView显示它们
+// 				todos: new List.generate(20, (i) => new NavigationTodo('Todo $i', 'A description of what needs to be done for Todo $i'))
+// 			)
+// 		)
+// 	);
+// }
+
+// 导航到新页面并返回值
 void main() {
-	runApp(
-		new MaterialApp(
-			title: 'Padding data',
-			debugShowCheckedModeBanner: false,
-			home: new NavigationPassingData(
-				// 生成20个待办事项并使用ListView显示它们
-				todos: new List.generate(20, (i) => new NavigationTodo('Todo $i', 'A description of what needs to be done for Todo $i'))
-			)
-		)
-	);
+	runApp(new MaterialApp(
+		title: 'Returning Data',
+		debugShowCheckedModeBanner: false,
+		home: new NavigationHomeScreenApp()
+	));
 }
