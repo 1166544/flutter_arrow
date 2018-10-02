@@ -74,6 +74,7 @@ void main() {
 	runApp(
 		new MaterialApp(
 			title: 'Padding data',
+			debugShowCheckedModeBanner: false,
 			home: new NavigationPassingData(
 				// 生成20个待办事项并使用ListView显示它们
 				todos: new List.generate(20, (i) => new NavigationTodo('Todo $i', 'A description of what needs to be done for Todo $i'))
