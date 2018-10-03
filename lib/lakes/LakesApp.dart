@@ -12,7 +12,7 @@ class LakesApp extends StatelessWidget {
           appBar: new AppBar(title: Text('Top Lakes')),
           body: new ListView(children: [
             this.getCoverImage(),
-            this.getTextSection(),
+            this.getTitleSection(),
             this.getButtonSection(context),
             this.getTextSection()
           ]),
