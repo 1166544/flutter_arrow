@@ -19,7 +19,8 @@ import 'package:flutter/material.dart';
 // import './navigation/NavigationTodo.dart';
 // import './navigation/NavigationPassingData.dart';
 // import './navigation/NavigationHomeScreenApp.dart';
-import './networking/NetworkingFetchData.dart';
+// import './networking/NetworkingFetchData.dart';
+import './sockets/SocketsApp.dart';
 
 // 创建不同类型子项的List
 // void main() => runApp(new ListCustomItemViewApp(
@@ -96,6 +97,11 @@ import './networking/NetworkingFetchData.dart';
 // }
 
 // 从网络获取数据
+// void main(List<String> args) {
+//   runApp(new NetworkingFetchDataApp());
+// }
+
+// SocketsHome
 void main(List<String> args) {
-  runApp(new NetworkingFetchDataApp());
+	runApp(new SockatesApp());
 }
