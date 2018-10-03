@@ -66,7 +66,7 @@ class SocketsState extends State<SocketsHome> {
 				stream: widget.channel.stream,
 				builder: (context, snapshot) {
 					return Padding(
-						padding: const EdgeInsets.symmetric(vertical: 240),
+						padding: const EdgeInsets.symmetric(vertical: 24.0),
 						child: Text(snapshot.hasData ? '${snapshot.data}' : ''),
 					);
 				}
