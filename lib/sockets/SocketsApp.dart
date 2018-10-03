@@ -7,7 +7,7 @@ import 'package:web_socket_channel/web_socket_channel.dart';
 class SockatesApp extends StatelessWidget {
 	@override
 	Widget build(BuildContext context) {
-		final title = 'WebSockt Demo';
+		final String title = 'WebSockt Demo';
 		return MaterialApp(
 			title: title,
 			debugShowCheckedModeBanner: false,

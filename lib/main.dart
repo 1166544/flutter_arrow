@@ -20,7 +20,8 @@ import 'package:flutter/material.dart';
 // import './navigation/NavigationPassingData.dart';
 // import './navigation/NavigationHomeScreenApp.dart';
 // import './networking/NetworkingFetchData.dart';
-import './sockets/SocketsApp.dart';
+// import './sockets/SocketsApp.dart';
+import './lakes/LakesApp.dart';
 
 // 创建不同类型子项的List
 // void main() => runApp(new ListCustomItemViewApp(
@@ -102,6 +103,11 @@ import './sockets/SocketsApp.dart';
 // }
 
 // SocketsHome
-void main(List<String> args) {
-	runApp(new SockatesApp());
+// void main(List<String> args) {
+// 	runApp(new SockatesApp());
+// }
+
+// LAKES布局示例
+void main() {
+  runApp(new LakesApp());
 }
