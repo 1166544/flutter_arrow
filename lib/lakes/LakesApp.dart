@@ -38,7 +38,7 @@ class LakesApp extends StatelessWidget {
 
   /// 按钮栏部份布局
   ///
-  /// @param context 上下文
+  /// * [context] 上下文
   Widget getButtonSection(BuildContext context) {
     return Container(
       child: Row(
@@ -84,9 +84,9 @@ class LakesApp extends StatelessWidget {
 
   /// 生成按钮封装
   ///
-  /// @param context 上下文
-  /// @param icon 图标
-  /// @param label 文本内容
+  /// * [context] 上下文
+  /// * [icon] 图标
+  /// * [label] 文本内容
   Column buildButtonColumn(BuildContext context, IconData icon, String label) {
     Color color = Theme.of(context).primaryColor;
 
