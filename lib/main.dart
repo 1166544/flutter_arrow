@@ -18,7 +18,8 @@ import 'package:flutter/material.dart';
 // import './navigation/NavigationBasicApp.dart';
 // import './navigation/NavigationTodo.dart';
 // import './navigation/NavigationPassingData.dart';
-import './navigation/NavigationHomeScreenApp.dart';
+// import './navigation/NavigationHomeScreenApp.dart';
+import './networking/NetworkingFetchData.dart';
 
 // 创建不同类型子项的List
 // void main() => runApp(new ListCustomItemViewApp(
@@ -86,10 +87,15 @@ import './navigation/NavigationHomeScreenApp.dart';
 // }
 
 // 导航到新页面并返回值
-void main() {
-	runApp(new MaterialApp(
-		title: 'Returning Data',
-		debugShowCheckedModeBanner: false,
-		home: new NavigationHomeScreenApp()
-	));
+// void main() {
+// 	runApp(new MaterialApp(
+// 		title: 'Returning Data',
+// 		debugShowCheckedModeBanner: false,
+// 		home: new NavigationHomeScreenApp()
+// 	));
+// }
+
+// 从网络获取数据
+void main(List<String> args) {
+  runApp(new NetworkingFetchDataApp());
 }
