@@ -7,7 +7,8 @@ class LakesApp extends StatelessWidget {
     // 这些widget放置到ListView中，而不是列中，因为在小设备上运行应用程序时，ListView会自动滚动
     return MaterialApp(
         title: 'Flutter Cover IMAGE DEMO',
-		debugShowCheckedModeBanner: false,
+		debugShowCheckedModeBanner: false,		// 显示DEBUG版标记
+		showSemanticsDebugger: false,			// 显示布局边框
         home: new Scaffold(
           appBar: new AppBar(title: Text('Top Lakes')),
           body: new ListView(children: [
@@ -153,7 +154,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
 
 				// 收藏数量文本
 				SizedBox(
-					width: 18.0,
+					width: 20.0,
 					child: Container(
 						child: Text('$_favoriteCount')
 					)
