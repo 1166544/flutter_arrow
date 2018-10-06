@@ -74,10 +74,8 @@ class LakesApp extends StatelessWidget {
                     style: TextStyle(color: Colors.grey[500]))
               ]),
         ),
-        // 第2列内容
-        Icon(Icons.star, color: Colors.red[500]),
-        // 第3列内容
-        Text('41')
+        // 第2列内容,第3列内容使用交互容器包含
+        FavoriteWidget()
       ]),
     );
   }
@@ -104,4 +102,63 @@ class LakesApp extends StatelessWidget {
                       color: color)))
         ]);
   }
+}
+
+/// 收藏交互按钮
+class FavoriteWidget extends StatefulWidget {
+	@override
+	_FavoriteWidgetState createState() => _FavoriteWidgetState();
+}
+
+/// 交互逻辑
+class _FavoriteWidgetState extends State<FavoriteWidget> {
+	bool _isFavorited = true;
+	int _favoriteCount = 41;
+
+	/// 收藏状态,设置setState通知框架重绘
+	void _toogleFavorite(){
+		setState(() {
+			if(this._isFavorited) {
+				this._favoriteCount -= 1;
+			} else {
+				this._favoriteCount += 1;
+			}
+			this._isFavorited = !this._isFavorited;
+		});
+	}
+
+	@override
+	Widget build(BuildContext context) {
+		return Row(
+			// 设置最小宽度适应
+			mainAxisSize: MainAxisSize.min,
+			children: <Widget>[
+				// CONTAINER容器使用ICONBUTTON包含，同时注册击事件
+				Container(
+					padding: EdgeInsets.all(0.0),
+					child: IconButton(
+						// 图标
+						icon:(
+							this._isFavorited ?
+							Icon(Icons.star)
+							:
+							Icon(Icons.star_border)
+						),
+						// 颜色
+						color: Colors.red[500],
+						// 注册点击事件
+						onPressed: this._toogleFavorite,
+					),
+				),
+
+				// 收藏数量文本
+				SizedBox(
+					width: 18.0,
+					child: Container(
+						child: Text('$_favoriteCount')
+					)
+				)
+			]
+		);
+	}
 }
