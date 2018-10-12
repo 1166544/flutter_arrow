@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+/// 卡选项
 class CardItem extends StatelessWidget {
 	const CardItem({
 		Key key,
@@ -37,6 +38,7 @@ class CardItem extends StatelessWidget {
 					child: SizedBox(
 						height: 128.0,
 						child: Card(
+							// 动态背景颜色
 							color: Colors.primaries[item % Colors.primaries.length],
 							child: Center(
 								child: Text('Item $item', style: textStyle)
