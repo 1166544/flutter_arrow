@@ -1,27 +1,33 @@
 import 'package:flutter/material.dart';
-// import './arrows/arrow/RandomScrollListApp.dart';
-// import './arrows/themes/ThemesColorApp.dart';
-// import './arrows/image/ImageHttpApp.dart';
-// import './arrows/listview/ListViewApp.dart';
-// import './arrows/listview/ListViewHorizontalApp.dart';
-// import './arrows/listview/ListViewBuilderApp.dart';
-// import './arrows/listview/ListCustomItemViewApp.dart';
-// import './arrows/listview/ListHeadingItem.dart';
-// import './arrows/listview/ListMessageItem.dart';
-// import './arrows/listview/ListItem.dart';
-// import './arrows/listview/ListGrid.dart';
-// import './arrows/getsures//GestureTabsApp.dart';
-// import './arrows/getsures//GestureMaterialApp.dart';
-// import './arrows/getsures//GestureDismissibleApp.dart';
-// import './arrows/image/ImageFadingApp.dart';
-// import './arrows/image/ImageCachedApp.dart';
-// import './arrows/navigation/NavigationBasicApp.dart';
-// import './arrows/navigation/NavigationTodo.dart';
-// import './arrows/navigation/NavigationPassingData.dart';
-// import './arrows/navigation/NavigationHomeScreenApp.dart';
-// import './arrows/networking/NetworkingFetchData.dart';
-// import './arrows/sockets/SocketsApp.dart';
-import './arrows/lakes/LakesApp.dart';
+// import './arrow/RandomScrollListApp.dart';
+// import './themes/ThemesColorApp.dart';
+// import './image/ImageHttpApp.dart';
+// import './listview/ListViewApp.dart';
+// import './listview/ListViewHorizontalApp.dart';
+// import './listview/ListViewBuilderApp.dart';
+// import './listview/ListCustomItemViewApp.dart';
+// import './listview/ListHeadingItem.dart';
+// import './listview/ListMessageItem.dart';
+// import './listview/ListItem.dart';
+// import './listview/ListGrid.dart';
+// import './getsures//GestureTabsApp.dart';
+// import './getsures//GestureMaterialApp.dart';
+// import './getsures//GestureDismissibleApp.dart';
+// import './image/ImageFadingApp.dart';
+// import './image/ImageCachedApp.dart';
+// import './navigation/NavigationBasicApp.dart';
+// import './navigation/NavigationTodo.dart';
+// import './navigation/NavigationPassingData.dart';
+// import './navigation/NavigationHomeScreenApp.dart';
+// import './networking/NetworkingFetchData.dart';
+// import './sockets/SocketsApp.dart';
+// import './lakes/LakesApp.dart';
+import './animates/AnimateListApp.dart';
+
+// 动画列表
+void main(List<String> args) {
+  runApp(new AnimateListApp());
+}
 
 // 创建不同类型子项的List
 // void main() => runApp(new ListCustomItemViewApp(
@@ -108,6 +114,6 @@ import './arrows/lakes/LakesApp.dart';
 // }
 
 // LAKES布局示例
-void main() {
-  runApp(new LakesApp());
-}
+// void main() {
+//   runApp(new LakesApp());
+// }
