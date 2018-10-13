@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './TabbedChoice.dart';
 
+/// CARD显示内容
 class ChoiceCard extends StatelessWidget {
 	const ChoiceCard({ Key key, this.choice }): super(key: key);
 
@@ -13,7 +14,7 @@ class ChoiceCard extends StatelessWidget {
 		return Card(
 			color: Colors.white,
 			child: Center(
-				child: Column(
+				child: Row(
 					mainAxisSize: MainAxisSize.min,
 					crossAxisAlignment: CrossAxisAlignment.center,
 					children: <Widget>[
