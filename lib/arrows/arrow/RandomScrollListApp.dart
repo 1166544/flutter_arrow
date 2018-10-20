@@ -10,7 +10,7 @@ class RandomScrollListApp extends StatelessWidget {
 		  theme: this.getThemeData(),
 		  home: new RandomWords()
 	  );
-  }
+  } 
 
   /// 定义主题样式
   ThemeData getThemeData() {
