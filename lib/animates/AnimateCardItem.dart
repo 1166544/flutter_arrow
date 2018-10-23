@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class CardItem extends StatelessWidget {
 	/**
-	 * 卡片列表对像
+	 * 卡片列表对像 
 	 */
 	const CardItem({
 		Key key,
