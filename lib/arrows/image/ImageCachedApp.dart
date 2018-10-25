@@ -3,6 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 
 /// 在某些情况下，在从网上下载图片后缓存图片可能会很方便，以便它们可以脱机使用。
 /// 为此可以使用cached_network_image包来达到目的。
+///
 /// 除了缓存之外，cached_image_network包在加载时还支持占位符和淡入淡出图片。
 class ImageCachedApp extends StatelessWidget {
 	@override
