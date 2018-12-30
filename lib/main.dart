@@ -24,6 +24,8 @@ import 'package:flutter/material.dart';
 // import './lakes/LakesApp.dart';
 import './animates/AnimateListApp.dart';
 
+ThemeData appTheme = ThemeData(primaryColor: Color(0xFFF3791A), fontFamily: 'Oxygen');
+
 // 动画列表
 void main(List<String> args) {
   runApp(new AnimateListApp());
