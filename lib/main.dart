@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'dart:io';
+import 'package:cached_network_image/cached_network_image.dart';
+
 // import './arrow/RandomScrollListApp.dart';
 // import './themes/ThemesColorApp.dart';
 // import './image/ImageHttpApp.dart';
@@ -22,14 +29,22 @@ import 'package:flutter/material.dart';
 // import './networking/NetworkingFetchData.dart';
 // import './sockets/SocketsApp.dart';
 // import './lakes/LakesApp.dart';
-import './animates/AnimateListApp.dart';
+// import './animates/AnimateListApp.dart';
 
 ThemeData appTheme = ThemeData(primaryColor: Color(0xFFF3791A), fontFamily: 'Oxygen');
+const TextStyle dropDownLabelStyle =
+    TextStyle(color: Colors.white, fontSize: 16.0);
+const TextStyle dropDownMenuItemStyle =
+    TextStyle(color: Colors.black, fontSize: 16.0);
+final formatCurrency = NumberFormat.simpleCurrency();
+
+Color firstColor = Color(0xFFF47D15);
+Color secondColor = Color(0xFFEF772C);
 
 // 动画列表
-void main(List<String> args) {
-  runApp(new AnimateListApp());
-}
+// void main(List<String> args) {
+//   runApp(new AnimateListApp());
+// }
 
 // 创建不同类型子项的List
 // void main() => runApp(new ListCustomItemViewApp(
