@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../main.dart';
+import 'package:flighttickets/flight/styles/CustomeStyle.dart';
 
 /// 自定义APPBAR
 class CustomAppBar extends StatelessWidget {
