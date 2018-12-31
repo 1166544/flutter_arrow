@@ -379,7 +379,7 @@ class CityCard extends StatelessWidget {
 
 	CityCard({this.city});
 
-	@verride
+	@override
 	Widget build(BuildContext context) {
 		return Padding(
 			padding: const EdgeInsets.symmetric(horizontal: 8.0),
