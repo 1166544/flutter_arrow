@@ -3,6 +3,7 @@ import 'package:flighttickets/flight/lists/CustomFlightDetails.dart';
 import 'package:flighttickets/flight/styles/CustomeStyle.dart';
 import 'package:flighttickets/flight/lists/CustomFlightDetailChip.dart';
 
+/// 列表ITEM
 class FlightCard extends StatelessWidget {
 	final FlightDetails flightDetails;
 

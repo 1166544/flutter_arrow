@@ -13,12 +13,17 @@ class FlightListingBottomPart extends StatelessWidget {
 			child: Column(
 				crossAxisAlignment: CrossAxisAlignment.start,
 				children: <Widget>[
-					Padding(padding: const EdgeInsets.symmetric(horizontal: 16.0), child: Text('Best Deals for Next 6 Months', style: dropDownMenuItemStyle)),
+					Padding(
+						padding: const EdgeInsets.symmetric(horizontal: 16.0),
+						child: Text('Best Deals for Next 6 Months', style: dropDownMenuItemStyle)
+					),
 					SizedBox(height: 10.0),
 					StreamBuilder(
 						stream: Firestore.instance.collection('deals').snapshots(),
 						builder: (context, snapshot) {
-							return !snapshot.hasData ? Center(child: CircularProgressIndicator()) : _buildDealsList(context, snapshot.data.documents);
+							return !snapshot.hasData
+								? Center(child: CircularProgressIndicator())
+								: this._buildDealsList(context, snapshot.data.documents);
 						},
 					)
 				],
@@ -26,6 +31,7 @@ class FlightListingBottomPart extends StatelessWidget {
 		);
 	}
 
+	/// 构建搜索列表
 	Widget _buildDealsList(BuildContext context, List<DocumentSnapshot> snapshots) {
 		return ListView.builder(
 			shrinkWrap: true,
