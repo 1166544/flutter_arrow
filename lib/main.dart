@@ -25,12 +25,14 @@ Future<void> main() async {
             )
 	);
 
-	runApp(MaterialApp(
-		title: 'Flight in the sky',
-		debugShowCheckedModeBanner: false,
-		home: HomeScreen(),
-		theme: appTheme,
-	));
+	runApp(
+		new MaterialApp(
+			title: 'Flight in the sky',				// APP标题
+			debugShowCheckedModeBanner: false,		// 去除DEBUG标记
+			home: HomeScreen(),						// 主页
+			theme: appTheme,						// APP主题
+		)
+	);
 }
 
 /// 主启动类
@@ -38,13 +40,13 @@ class HomeScreen extends StatelessWidget {
 	@override
 	Widget build(BuildContext context) {
 		return Scaffold(
-			bottomNavigationBar: CustomAppBar(),
-			body: SingleChildScrollView(
-				scrollDirection: Axis.vertical,
-				child: Column(
-					children: <Widget>[
-						HomeScreenTopPart(),
-						homeScreenBottomPart,
+			bottomNavigationBar: CustomAppBar(),	// 自定义APP BAR
+			body: SingleChildScrollView(			// 使用可滚动单个小部件
+				scrollDirection: Axis.vertical,		// 滚动方向：垂直
+				child: Column(						// 定义竖向行容器
+					children: <Widget>[				// 竖向容器包含多个子容器
+						HomeScreenTopPart(),		// 容器顶部内容
+						homeScreenBottomPart,		// 容器底部内容
 						homeScreenBottomPart
 					],
 				),

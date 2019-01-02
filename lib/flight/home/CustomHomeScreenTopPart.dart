@@ -8,7 +8,7 @@ import 'package:flighttickets/flight/home/CustomHomeLocation.dart';
 import 'package:flighttickets/flight/home/CustomHomeChoiceChip.dart';
 import 'package:flighttickets/flight/lists/CustomFlightList.dart';
 
-/// 主页类
+/// 主页顶部内容类
 class HomeScreenTopPart extends StatefulWidget {
 	@override
 	_HomeScreenTopPartState createState() => _HomeScreenTopPartState();
