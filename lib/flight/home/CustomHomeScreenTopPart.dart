@@ -8,30 +8,7 @@ import 'package:flighttickets/flight/home/CustomHomeLocation.dart';
 import 'package:flighttickets/flight/home/CustomHomeChoiceChip.dart';
 import 'package:flighttickets/flight/lists/CustomFlightList.dart';
 
-List<String> locations = List();
-final _searchFieldController = TextEditingController();
-
-addLocations(BuildContext context, List<DocumentSnapshot> snapshots) {
-	for(int i = 0; i < snapshots.length; i++) {
-		final Location location = Location.fromSnapshot(snapshots[i]);
-		locations.add(location.name);
-	}
-}
-
-List<PopupMenuItem<int>> _buildPopupMenuItem() {
-	List<PopupMenuItem<int>> popupMenuItems = List();
-	for (int i = 0; i < locations.length; i++) {
-		popupMenuItems.add(
-			PopupMenuItem(
-				child: Text(locations[i], style: dropDownMenuItemStyle),
-				value: i,
-			)
-		);
-	}
-
-	return popupMenuItems;
-}
-
+/// 主页类
 class HomeScreenTopPart extends StatefulWidget {
 	@override
 	_HomeScreenTopPartState createState() => _HomeScreenTopPartState();
@@ -188,4 +165,28 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
 			},
 		);
 	}
+}
+
+List<String> locations = List();
+final _searchFieldController = TextEditingController();
+
+addLocations(BuildContext context, List<DocumentSnapshot> snapshots) {
+	for(int i = 0; i < snapshots.length; i++) {
+		final Location location = Location.fromSnapshot(snapshots[i]);
+		locations.add(location.name);
+	}
+}
+
+List<PopupMenuItem<int>> _buildPopupMenuItem() {
+	List<PopupMenuItem<int>> popupMenuItems = List();
+	for (int i = 0; i < locations.length; i++) {
+		popupMenuItems.add(
+			PopupMenuItem(
+				child: Text(locations[i], style: dropDownMenuItemStyle),
+				value: i,
+			)
+		);
+	}
+
+	return popupMenuItems;
 }
