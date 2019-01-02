@@ -3,6 +3,7 @@ import 'package:flighttickets/flight/lists/CustomFlightList.dart';
 import 'package:flighttickets/flight/styles/CustomShapeClipper.dart';
 import 'package:flighttickets/flight/styles/CustomeStyle.dart';
 
+/// 搜索结果页顶部内容
 class FlightListTopPart extends StatelessWidget {
 	@override
 	Widget build(BuildContext context) {

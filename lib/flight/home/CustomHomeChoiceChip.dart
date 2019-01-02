@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+/**
+ * 选择按钮
+ */
 class ChoiceChipIcon extends StatefulWidget {
 	final IconData icon;
 	final String text;
@@ -11,6 +14,7 @@ class ChoiceChipIcon extends StatefulWidget {
 	_ChoiceChipState createState() => _ChoiceChipState();
 }
 
+/// 选择按钮状态处理类
 class _ChoiceChipState extends State<ChoiceChipIcon> {
 	@override
 	Widget build(BuildContext context) {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// 跳转子页处理
 class InheritedFlightListing extends InheritedWidget {
 
 	final String toLocation;

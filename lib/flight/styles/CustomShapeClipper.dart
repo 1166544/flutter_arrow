@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// 自定义形状
+/// 自定义曲线形状
 class CustomShapeClipper extends CustomClipper<Path> {
 
 	@override

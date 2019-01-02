@@ -4,6 +4,7 @@ import 'package:flighttickets/flight/styles/CustomeStyle.dart';
 import 'package:flighttickets/flight/lists/CustomFlightCard.dart';
 import 'package:flighttickets/flight/lists/CustomFlightDetails.dart';
 
+/// 搜索结果页底部内容
 class FlightListingBottomPart extends StatelessWidget {
 	@override
 	Widget build(BuildContext context) {
