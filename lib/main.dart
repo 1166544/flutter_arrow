@@ -27,7 +27,7 @@ Future<void> main() async {
 
 	runApp(
 		new MaterialApp(
-			title: 'Flight in the sky',				// APP标题
+			title: 'Up in the Air',					// APP标题
 			debugShowCheckedModeBanner: false,		// 去除DEBUG标记
 			home: HomeScreen(),						// 主页
 			theme: appTheme,						// APP主题
@@ -46,8 +46,8 @@ class HomeScreen extends StatelessWidget {
 				child: Column(													// 定义竖向行容器
 					children: <Widget>[											// 竖向容器包含多个子容器
 						HomeScreenTopPart(),									// 容器顶部内容
-						HomeScreenBottomPart.of(context).getBottomPart(),		// 容器底部内容
-						HomeScreenBottomPart.of(context).getBottomPart()
+						homeScreenBottomPart,									// 容器底部内容
+						homeScreenBottomPart
 					],
 				),
 			),
