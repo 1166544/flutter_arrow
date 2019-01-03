@@ -31,15 +31,15 @@ class FlightListingBottomPart extends StatelessWidget {
 		);
 	}
 
-	/// 构建搜索列表
+	/// 构建搜索结果列表
 	Widget _buildDealsList(BuildContext context, List<DocumentSnapshot> snapshots) {
 		return ListView.builder(
-			shrinkWrap: true,
+			shrinkWrap: true,																		// 创建按需创建的可滚动线性小部件数组
 			itemCount: snapshots.length,
-			physics: ClampingScrollPhysics(),
+			physics: ClampingScrollPhysics(),														// 滑动边界超出处理
 			scrollDirection: Axis.vertical,
 			itemBuilder: (context, index) {
-				return FlightCard(flightDetails: FlightDetails.fromSnapshot(snapshots[index]));
+				return FlightCardItem(flightDetails: FlightDetails.fromSnapshot(snapshots[index]));		// 动态创建子内容
 			},
 		);
 	}

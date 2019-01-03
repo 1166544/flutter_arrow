@@ -4,26 +4,28 @@ import 'package:flighttickets/flight/styles/CustomeStyle.dart';
 import 'package:flighttickets/flight/lists/CustomFlightDetailChip.dart';
 
 /// 列表ITEM
-class FlightCard extends StatelessWidget {
+class FlightCardItem extends StatelessWidget {
+
+	/// 航班信息
 	final FlightDetails flightDetails;
 
-	FlightCard({this.flightDetails});
+	FlightCardItem({this.flightDetails});
 
 	@override
-	Widget build(BuildContext contenxt) {
+	Widget build(BuildContext context) {
 		return Padding(
-			padding: const EdgeInsets.symmetric(vertical: 8.0),
+			padding: const EdgeInsets.symmetric(vertical: 8.0),		// 只指定上下边矩
 			child: Stack(
 				children: <Widget>[
-					this.getFlightCardContainer(),
-					this.getFlightPositioned()
+					this.buildFlightCardContainer(),
+					this.buildFlightPositioned()
 				],
 			),
 		);
 	}
 
 	/// 航班位置容器
-	Widget getFlightPositioned() {
+	Widget buildFlightPositioned() {
 		return Positioned(
 			top: 10.0,
 			right: 0.0,
@@ -36,7 +38,7 @@ class FlightCard extends StatelessWidget {
 	}
 
 	/// 航班信息容器
-	Widget getFlightCardContainer() {
+	Widget buildFlightCardContainer() {
 		return Container(
 			margin: const EdgeInsets.only(right: 16.0),
 			decoration: BoxDecoration(
