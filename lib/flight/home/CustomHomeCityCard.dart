@@ -3,6 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flighttickets/flight/home/CustomHomeCity.dart';
 import 'package:flighttickets/flight/styles/CustomeStyle.dart';
 
+/// 首页展示卡片
 class CityCard extends StatelessWidget {
 	final City city;
 
@@ -16,14 +17,15 @@ class CityCard extends StatelessWidget {
 				crossAxisAlignment: CrossAxisAlignment.start,
 				mainAxisAlignment: MainAxisAlignment.spaceBetween,
 				children: <Widget>[
-					this.getCityCardClipRRect(),
-					this.getCityCardRow()
+					this.buildCityCardClipRRect(),
+					this.buildCityCardRow()
 				],
 			),
 		);
 	}
 
-	Widget getCityCardRow() {
+	/// 卡片标题
+	Widget buildCityCardRow() {
 		return Row(
 			mainAxisSize: MainAxisSize.max,
 			mainAxisAlignment: MainAxisAlignment.start,
@@ -36,7 +38,8 @@ class CityCard extends StatelessWidget {
 		);
 	}
 
-	Widget getCityCardClipRRect() {
+	/// 卡片图片
+	Widget buildCityCardClipRRect() {
 		return ClipRRect(
 			borderRadius: BorderRadius.all(Radius.circular(10.0)),
 			child: Stack(
@@ -47,7 +50,7 @@ class CityCard extends StatelessWidget {
 						child: CachedNetworkImage(
 							imageUrl: '${city.imagePath}',
 							fit: BoxFit.cover,
-							fadeInDuration: Duration(milliseconds: 500),
+							fadeInDuration: Duration(milliseconds: 500),					// 添加加载中转圈圈动画
 							fadeInCurve: Curves.easeIn,
 							placeholder: Center(child: CircularProgressIndicator())
 						),
@@ -57,7 +60,7 @@ class CityCard extends StatelessWidget {
 						bottom: 0.0,
 						width: 160.0,
 						height: 60.0,
-						child: Container(
+						child: Container(													// 添加透明渐变效果
 							decoration: BoxDecoration(
 								gradient: LinearGradient(
 									begin: Alignment.bottomCenter,

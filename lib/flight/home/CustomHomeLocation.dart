@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+/// 数据过滤
 class Location {
   final String name;
 

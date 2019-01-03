@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+/// 定义航班城市数据结构
 class City {
 	final String imagePath, cityName, monthYear, discount;
 	final int oldPrice, newPrice;

@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+/// 航班信息数据
 class FlightDetails {
 	final String airlines;
 	final String date;
