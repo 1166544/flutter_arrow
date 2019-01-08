@@ -1,7 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'dart:io';
 
 import 'package:flighttickets/flight/bar/CustomAppBar.dart';
 import 'package:flighttickets/flight/styles/CustomeStyle.dart';
@@ -10,20 +8,6 @@ import 'package:flighttickets/flight/home/CustomHomeScreenButtomPart.dart';
 
 /// 启动
 Future<void> main() async {
-	final FirebaseApp app = await FirebaseApp.configure(
-		name: 'flight-firestore',
-		options: Platform.isIOS
-			? const FirebaseOptions(
-              googleAppID: '1:1009830851809:ios:8658d2b8af672428',
-              gcmSenderID: '1009830851809',
-              databaseURL: 'https://flight-app-mock.firebaseio.com/',
-            )
-          : const FirebaseOptions(
-              googleAppID: '1:1009830851809:android:8658d2b8af672428',
-              apiKey: 'AIzaSyD40ZrOJQh-hTva6dQ-ddYo95fXq5LOb3E',
-              databaseURL: 'https://flight-app-mock.firebaseio.com/',
-            )
-	);
 
 	runApp(
 		new MaterialApp(
@@ -47,7 +31,6 @@ class HomeScreen extends StatelessWidget {
 					children: <Widget>[											// 竖向容器包含多个子容器
 						HomeScreenTopPart(),									// 容器顶部内容
 						homeScreenBottomPart,									// 容器底部内容
-						homeScreenBottomPart
 					],
 				),
 			),

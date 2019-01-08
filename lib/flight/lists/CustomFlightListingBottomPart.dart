@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flighttickets/flight/styles/CustomeStyle.dart';
 import 'package:flighttickets/flight/lists/CustomFlightCard.dart';
 import 'package:flighttickets/flight/lists/CustomFlightDetails.dart';
+import 'dart:async';
 
 /// 搜索结果页底部内容
 class FlightListingBottomPart extends StatelessWidget {
+
+	StreamController<List<FlightDetails>> _dealsList = new StreamController<List<FlightDetails>>();
+
 	@override
 	Widget build(BuildContext context) {
 		return Padding(
@@ -19,11 +22,12 @@ class FlightListingBottomPart extends StatelessWidget {
 					),
 					SizedBox(height: 10.0),
 					StreamBuilder(
-						stream: Firestore.instance.collection('deals').snapshots(),
+						stream: _dealsList.stream,
+						initialData: this._initStremData(),
 						builder: (context, snapshot) {
 							return !snapshot.hasData
 								? Center(child: CircularProgressIndicator())
-								: this._buildDealsList(context, snapshot.data.documents);
+								: this._buildDealsList(context, snapshot.data);
 						},
 					)
 				],
@@ -32,16 +36,23 @@ class FlightListingBottomPart extends StatelessWidget {
 	}
 
 	/// 构建搜索结果列表
-	Widget _buildDealsList(BuildContext context, List<DocumentSnapshot> snapshots) {
+	Widget _buildDealsList(BuildContext context, List<FlightDetails> snapshots) {
 		return ListView.builder(
 			shrinkWrap: true,																		// 创建按需创建的可滚动线性小部件数组
 			itemCount: snapshots.length,
 			physics: ClampingScrollPhysics(),														// 滑动边界超出处理
 			scrollDirection: Axis.vertical,
 			itemBuilder: (context, index) {
-				return FlightCardItem(flightDetails: FlightDetails.fromSnapshot(snapshots[index]));		// 动态创建子内容
+				return FlightCardItem(flightDetails: snapshots[index]);		// 动态创建子内容
 			},
 		);
+	}
+
+	/**
+	 * 初始化数据
+	 */
+	_initStremData() {
+		this._dealsList.add([new FlightDetails(), new FlightDetails(), new FlightDetails(), new FlightDetails(), new FlightDetails(), new FlightDetails()]);
 	}
 
 }

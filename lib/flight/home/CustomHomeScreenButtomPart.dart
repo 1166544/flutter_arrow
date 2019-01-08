@@ -3,7 +3,9 @@ import 'package:flighttickets/flight/styles/CustomeStyle.dart';
 import 'package:flighttickets/flight/styles/CustomViewAllStyle.dart';
 import 'package:flighttickets/flight/home/CustomHomeCityCard.dart';
 import 'package:flighttickets/flight/home/CustomHomeCity.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'dart:async';
+
+StreamController<List<City>> _cities = new StreamController<List<City>>();
 
 var homeScreenBottomPart = Column(
 	children: <Widget>[
@@ -22,12 +24,13 @@ var homeScreenBottomPart = Column(
 		Container(
 			height: 240.0,
 			child: StreamBuilder(
-				stream: Firestore.instance.collection('cities').orderBy('newPrice').snapshots(),
+				stream: _cities.stream,
+				initialData: _initStremData(),
 				builder: (context, snapshot) {
 					print('${snapshot.hasData}');
 					return !snapshot.hasData
 						? Center(child: CircularProgressIndicator())
-						: _buildCitiesList(context, snapshot.data.documents);
+						: _buildCitiesList(context, snapshot.data);
 				},
 			),
 		)
@@ -35,12 +38,19 @@ var homeScreenBottomPart = Column(
 );
 
 /// 构建城市列表
-Widget _buildCitiesList(BuildContext context, List<DocumentSnapshot> snapshots) {
+Widget _buildCitiesList(BuildContext context, List<City> snapshots) {
 	return ListView.builder(
 		itemCount: snapshots.length,
 		scrollDirection: Axis.horizontal,
 		itemBuilder: (context, index) {
-			return CityCard(city: City.fromSnapshot(snapshots[index]));
+			return CityCard(city: snapshots[index]);
 		},
 	);
+}
+
+/**
+ *  初始化数据
+ */
+_initStremData() {
+	_cities.add([new City(), new City()]);
 }

@@ -3,10 +3,10 @@ import 'package:flighttickets/flight/styles/CustomShapeClipper.dart';
 import 'package:flighttickets/flight/styles/CustomeStyle.dart';
 import 'package:flighttickets/flight/home/CustomHomeChoiceChip.dart';
 import 'package:flighttickets/flight/lists/CustomFlightListingScreen.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flighttickets/flight/home/CustomHomeLocation.dart';
 import 'package:flighttickets/flight/home/CustomHomeChoiceChip.dart';
 import 'package:flighttickets/flight/lists/CustomFlightList.dart';
+import 'dart:async';
 
 /// 主页顶部内容类
 class HomeScreenTopPart extends StatefulWidget {
@@ -22,6 +22,7 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
 	var isFlightSelected = true;
 	final _searchFieldController = TextEditingController();
 	final List<String> locations = List();
+	StreamController<List<Location>> _locationsData = new StreamController<List<Location>>();
 
 	@override
 	Widget build(BuildContext context) {
@@ -153,10 +154,11 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
 	 */
     Widget buildTopNavMenu(BuildContext context) {
 		return StreamBuilder(
-			stream: Firestore.instance.collection('locations').snapshots(),
+			stream: this._locationsData.stream,
+			initialData: _initStremData(),
 			builder: (context, snapshot) {
 				if (snapshot.hasData) {
-					this.addLocations(context, snapshot.data.documents);
+					this.addLocations(context, snapshot.data);
 				}
 
 				return !snapshot.hasData
@@ -213,10 +215,17 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
 	 * @returns
 	 *
 	 */
-	void addLocations(BuildContext context, List<DocumentSnapshot> snapshots) {
+	void addLocations(BuildContext context, List<Location> snapshots) {
 		for(int i = 0; i < snapshots.length; i++) {
-			final Location location = Location.fromSnapshot(snapshots[i]);
+			final Location location = snapshots[i];
 			this.locations.add(location.name);
 		}
+	}
+
+	/**
+	 * 初始化数据
+	 */
+	_initStremData() {
+		this._locationsData.add([new Location(), new Location()]);
 	}
 }
