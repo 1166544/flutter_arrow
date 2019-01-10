@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
 	Widget build(BuildContext context) {
 		return Scaffold(
 			bottomNavigationBar: CustomAppBar(),								// 自定义APP BAR
-			body: SingleChildScrollView(										    // 使用可滚动单个小部件
+			body: SingleChildScrollView(										// 使用可滚动单个小部件
 				scrollDirection: Axis.vertical,									  // 滚动方向：垂直
 				child: Column(													          // 定义竖向行容器
 					children: <Widget>[											        // 竖向容器包含多个子容器
