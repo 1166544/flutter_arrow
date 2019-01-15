@@ -22,7 +22,7 @@ class _ChoiceChipState extends State<ChoiceChipIcon> {
 			padding: EdgeInsets.symmetric(horizontal: 18.0, vertical: 8.0),
 			decoration: widget.isSelected
 				? BoxDecoration(
-					color: Colors.white.withOpacity(0.15),
+					color: Colors.black.withOpacity(0.15),
 					borderRadius: BorderRadius.all(Radius.circular(20.0))
 				)
 				: null,

@@ -11,5 +11,5 @@ const TextStyle dropDownMenuItemStyle = TextStyle(color: Colors.black, fontSize:
 
 ThemeData appTheme = ThemeData(primaryColor: Color(0xFFF3791A), fontFamily: 'Oxygen');
 
-Color firstColor = Color(0xFFF47D15);
-Color secondColor = Color(0xFFEF772C);
+Color firstColor = Color(0xFFffcd00);
+Color secondColor = Color(0xFFffcd00);

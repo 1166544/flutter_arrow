@@ -142,7 +142,7 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
 	Widget buildMainTitle() {
 		return Text(
 			'Where would\nyou want to go?',
-			style: TextStyle(fontSize: 24.0, color: Colors.white),
+			style: TextStyle(fontSize: 26.0, color: Colors.black, fontWeight: FontWeight.bold),
 			textAlign: TextAlign.center
 		);
 	}
