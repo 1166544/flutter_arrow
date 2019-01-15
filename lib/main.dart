@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
 					children: <Widget>[											// 竖向容器包含多个子容器
 						HomeScreenTopPart(),									// 容器顶部内容
 						HomeScreenBottomPart(),									// 容器底部内容
-						HomeScreenBottomPart(),								// 容器底部内容
+						HomeScreenBottomPart(),									// 容器底部内容
 					],
 				),
 			),
