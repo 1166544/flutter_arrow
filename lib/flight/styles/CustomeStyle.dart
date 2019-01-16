@@ -9,6 +9,7 @@ final NumberFormat formatCurrency = NumberFormat.simpleCurrency();
 const TextStyle dropDownLabelStyle = TextStyle(color: Colors.white, fontSize: 16.0);
 const TextStyle dropDownMenuItemStyle = TextStyle(color: Colors.black, fontSize: 16.0);
 
+// 主题和颜色
 ThemeData appTheme = ThemeData(primaryColor: Color(0xFFefc106), fontFamily: 'Oxygen');
 
 Color firstColor = Color(0xFFffcd00);
