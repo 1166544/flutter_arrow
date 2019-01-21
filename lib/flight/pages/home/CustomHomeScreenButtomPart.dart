@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flighttickets/flight/styles/CustomeStyle.dart';
 import 'package:flighttickets/flight/styles/CustomViewAllStyle.dart';
-import 'package:flighttickets/flight/home/CustomHomeCityCard.dart';
-import 'package:flighttickets/flight/home/CustomHomeCity.dart';
+import 'package:flighttickets/flight/pages/home/CustomHomeCityCard.dart';
+import 'package:flighttickets/flight/pages/home/CustomHomeCity.dart';
 import 'dart:async';
 
 /// 底部布局
@@ -10,7 +10,9 @@ class HomeScreenBottomPart  extends StatelessWidget {
 
 	StreamController<List<City>> _cities = new StreamController<List<City>>();
 
-	HomeScreenBottomPart();
+	HomeScreenBottomPart() {
+		// hole
+	}
 
 	/**
 	 *  初始化数据

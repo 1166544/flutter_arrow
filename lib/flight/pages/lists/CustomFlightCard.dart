@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flighttickets/flight/lists/CustomFlightDetails.dart';
+import 'package:flighttickets/flight/pages/lists/CustomFlightDetails.dart';
 import 'package:flighttickets/flight/styles/CustomeStyle.dart';
-import 'package:flighttickets/flight/lists/CustomFlightDetailChip.dart';
+import 'package:flighttickets/flight/pages/lists/CustomFlightDetailChip.dart';
 
 /// 列表ITEM
 class FlightCardItem extends StatelessWidget {

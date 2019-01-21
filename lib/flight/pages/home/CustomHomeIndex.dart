@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flighttickets/flight/home/CustomHomeScreenTopPart.dart';
-import 'package:flighttickets/flight/home/CustomHomeScreenButtomPart.dart';
+import 'package:flighttickets/flight/pages/home/CustomHomeScreenTopPart.dart';
+import 'package:flighttickets/flight/pages/home/CustomHomeScreenButtomPart.dart';
 
 /// 首页
 class CustomHomeIndex extends StatelessWidget {

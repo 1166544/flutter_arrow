@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flighttickets/flight/styles/CustomeStyle.dart';
-import 'package:flighttickets/flight/lists/CustomFlightCard.dart';
-import 'package:flighttickets/flight/lists/CustomFlightDetails.dart';
+import 'package:flighttickets/flight/pages/lists/CustomFlightCard.dart';
+import 'package:flighttickets/flight/pages/lists/CustomFlightDetails.dart';
 import 'dart:async';
 
 /// 搜索结果页底部内容

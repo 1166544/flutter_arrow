@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flighttickets/flight/lists/CustomFlightListTopPart.dart';
-import 'package:flighttickets/flight/lists/CustomFlightListingBottomPart.dart';
+import 'package:flighttickets/flight/pages/lists/CustomFlightListTopPart.dart';
+import 'package:flighttickets/flight/pages/lists/CustomFlightListingBottomPart.dart';
 
 /// 搜索页面
 class FlightListingScreen extends StatelessWidget {

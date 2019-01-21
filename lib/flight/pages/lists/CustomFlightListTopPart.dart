@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flighttickets/flight/lists/CustomFlightList.dart';
+import 'package:flighttickets/flight/pages/lists/CustomFlightList.dart';
 import 'package:flighttickets/flight/styles/CustomShapeClipper.dart';
 import 'package:flighttickets/flight/styles/CustomeStyle.dart';
 

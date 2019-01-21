@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flighttickets/flight/styles/CustomShapeClipper.dart';
 import 'package:flighttickets/flight/styles/CustomeStyle.dart';
-import 'package:flighttickets/flight/home/CustomHomeChoiceChip.dart';
-import 'package:flighttickets/flight/lists/CustomFlightListingScreen.dart';
-import 'package:flighttickets/flight/home/CustomHomeLocation.dart';
-import 'package:flighttickets/flight/home/CustomHomeChoiceChip.dart';
-import 'package:flighttickets/flight/lists/CustomFlightList.dart';
+import 'package:flighttickets/flight/pages/home/CustomHomeChoiceChip.dart';
+import 'package:flighttickets/flight/pages/lists/CustomFlightListingScreen.dart';
+import 'package:flighttickets/flight/pages/home/CustomHomeLocation.dart';
+import 'package:flighttickets/flight/pages/home/CustomHomeChoiceChip.dart';
+import 'package:flighttickets/flight/pages/lists/CustomFlightList.dart';
 import 'dart:async';
 
 /// 主页顶部内容类

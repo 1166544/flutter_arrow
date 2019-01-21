@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flighttickets/flight/home/CustomHomeCity.dart';
+import 'package:flighttickets/flight/pages/home/CustomHomeCity.dart';
 import 'package:flighttickets/flight/styles/CustomeStyle.dart';
 
 /// 首页展示卡片

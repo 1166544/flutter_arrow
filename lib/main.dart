@@ -1,12 +1,8 @@
-
 import 'package:flutter/material.dart';
 
 import 'package:flighttickets/flight/styles/CustomeStyle.dart';
-import 'package:flighttickets/flight/deals/CustomDeals.dart';
-import 'package:flighttickets/flight/notifications/CustomNotifications.dart';
-import 'package:flighttickets/flight/whatlist/CustomWhatList.dart';
 import 'package:flighttickets/flight/styles/CustomeStyle.dart';
-import 'package:flighttickets/flight/home/CustomHomeIndex.dart';
+import 'package:flighttickets/flight/routers/CustomRouterView.dart';
 
 /// 启动
 Future<void> main() async {
@@ -36,36 +32,20 @@ class HomeScreenPageState extends State<HomeScreen> {
 	int _selectedIndex = 0;
 
 	// TAB列表VIEW层数据
-	final _tapWidgetOptions = [
-		CustomHomeIndex(),
-		CustomWhatList(),
-		CustomDeals(),
-		CustomNotifications()
-	];
-
-	// 默认样式
-	TextStyle defaultBarItemStyle;
-
-	// 选中样式
-	TextStyle selectedBarItemStyle;
+	List<Widget> _tapWidgetOptions;
 
 	// 添加TAB数据
 	List<BottomNavigationBarItem> bottomBarItems;
 
 	HomeScreenPageState() {
-		// 默认样式
-		this.defaultBarItemStyle = TextStyle(fontStyle: FontStyle.normal, color: Colors.black);
+		// 路由页面数据
+		final CustomRouterView customRouter = new CustomRouterView();
 
-		// 选中样式
-		this.selectedBarItemStyle = this.defaultBarItemStyle.copyWith(color: appTheme.primaryColor);
+		// 视图列表数据
+		this._tapWidgetOptions = customRouter.getViewList();
 
 		// 添加TAB按钮数据
-		this.bottomBarItems = [
-			this.getNavigationBarItem(Icons.home, appTheme.primaryColor, 'Explore', selectedBarItemStyle),
-			this.getNavigationBarItem(Icons.favorite, appTheme.primaryColor, 'Whatlist', defaultBarItemStyle),
-			this.getNavigationBarItem(Icons.bookmark, appTheme.primaryColor, 'Deals', defaultBarItemStyle),
-			this.getNavigationBarItem(Icons.notifications, appTheme.primaryColor, 'Notifications', defaultBarItemStyle)
-		];
+		this.bottomBarItems = customRouter.getBarButtonList(appTheme);
 	}
 
 	@override
@@ -80,21 +60,8 @@ class HomeScreenPageState extends State<HomeScreen> {
 			),
 			body: SingleChildScrollView(										// 使用可滚动单个小部件
 				scrollDirection: Axis.vertical,									// 滚动方向：垂直
-				child: this._tapWidgetOptions.elementAt(this._selectedIndex)
+				child: this._tapWidgetOptions.elementAt(this._selectedIndex)	// 绑定当前选中的页面视图
 			),
-		);
-	}
-
-	/**
-	 * 构造TAB ITEM按钮内容
-	 * @params icon 图标
-	 * @params color 图标颜色
-	 * @params label 文字
-	 * @params style 文样样式
-	 */
-	BottomNavigationBarItem getNavigationBarItem(IconData icon, Color color, String label, TextStyle style) {
-		return BottomNavigationBarItem(
-			icon: Icon(icon, color: color), title: Text(label, style: style)
 		);
 	}
 
