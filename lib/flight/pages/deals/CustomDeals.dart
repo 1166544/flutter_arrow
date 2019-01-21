@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomDeals extends StatelessWidget {
+class CustomDealsPage extends StatelessWidget {
 	@override
 	Widget build(BuildContext context) {
 		return Text('Deals page');

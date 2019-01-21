@@ -3,9 +3,9 @@ import 'package:flighttickets/flight/pages/home/CustomHomeScreenTopPart.dart';
 import 'package:flighttickets/flight/pages/home/CustomHomeScreenButtomPart.dart';
 
 /// 首页
-class CustomHomeIndex extends StatelessWidget {
+class CustomHomeIndexPage extends StatelessWidget {
 
-	CustomHomeIndex() {
+	CustomHomeIndexPage() {
 		// hole
 	}
 

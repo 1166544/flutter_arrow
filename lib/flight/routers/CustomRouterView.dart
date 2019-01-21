@@ -24,10 +24,10 @@ class CustomRouterView {
 	/// 视图层页面列表
 	List<Widget> getViewList() {
 		return [
-			CustomHomeIndex(),
-			CustomWhatList(),
-			CustomDeals(),
-			CustomNotifications()
+			CustomHomeIndexPage(),
+			CustomWhatListPage(),
+			CustomDealsPage(),
+			CustomNotificationsPage()
 		];
 	}
 
