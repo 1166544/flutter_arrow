@@ -1,10 +1,12 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:flighttickets/flight/bar/CustomAppBar.dart';
 import 'package:flighttickets/flight/styles/CustomeStyle.dart';
-import 'package:flighttickets/flight/home/CustomHomeScreenTopPart.dart';
-import 'package:flighttickets/flight/home/CustomHomeScreenButtomPart.dart';
+import 'package:flighttickets/flight/deals/CustomDeals.dart';
+import 'package:flighttickets/flight/notifications/CustomNotifications.dart';
+import 'package:flighttickets/flight/whatlist/CustomWhatList.dart';
+import 'package:flighttickets/flight/styles/CustomeStyle.dart';
+import 'package:flighttickets/flight/home/CustomHomeIndex.dart';
 
 /// 启动
 Future<void> main() async {
@@ -20,22 +22,87 @@ Future<void> main() async {
 }
 
 /// 主启动类
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+	HomeScreen({Key key}): super(key: key);
+
+	@override
+	HomeScreenPageState createState() => HomeScreenPageState();
+}
+
+/// 主入口类
+class HomeScreenPageState extends State<HomeScreen> {
+
+	// 当前选中TAB
+	int _selectedIndex = 0;
+
+	// TAB列表VIEW层数据
+	final _tapWidgetOptions = [
+		CustomHomeIndex(),
+		CustomWhatList(),
+		CustomDeals(),
+		CustomNotifications()
+	];
+
+	// 默认样式
+	TextStyle defaultBarItemStyle;
+
+	// 选中样式
+	TextStyle selectedBarItemStyle;
+
+	// 添加TAB数据
+	List<BottomNavigationBarItem> bottomBarItems;
+
+	HomeScreenPageState() {
+		// 默认样式
+		this.defaultBarItemStyle = TextStyle(fontStyle: FontStyle.normal, color: Colors.black);
+
+		// 选中样式
+		this.selectedBarItemStyle = this.defaultBarItemStyle.copyWith(color: appTheme.primaryColor);
+
+		// 添加TAB按钮数据
+		this.bottomBarItems = [
+			this.getNavigationBarItem(Icons.home, appTheme.primaryColor, 'Explore', selectedBarItemStyle),
+			this.getNavigationBarItem(Icons.favorite, appTheme.primaryColor, 'Whatlist', defaultBarItemStyle),
+			this.getNavigationBarItem(Icons.bookmark, appTheme.primaryColor, 'Deals', defaultBarItemStyle),
+			this.getNavigationBarItem(Icons.notifications, appTheme.primaryColor, 'Notifications', defaultBarItemStyle)
+		];
+	}
+
 	@override
 	Widget build(BuildContext context) {
 		return Scaffold(
-			bottomNavigationBar: CustomAppBar(),								// 自定义APP BAR
+			bottomNavigationBar: BottomNavigationBar(
+				items: this.bottomBarItems,
+				type: BottomNavigationBarType.fixed,
+				fixedColor: Colors.deepPurple,
+				currentIndex: this._selectedIndex,								// 当前选中页
+				onTap: this._onTabBarItemTapped,								// TAB选中处理
+			),
 			body: SingleChildScrollView(										// 使用可滚动单个小部件
 				scrollDirection: Axis.vertical,									// 滚动方向：垂直
-				child: Column(													// 定义竖向行容器
-					children: <Widget>[											// 竖向容器包含多个子容器
-						HomeScreenTopPart(),									// 容器顶部内容
-						HomeScreenBottomPart(),									// 容器底部内容
-						HomeScreenBottomPart(),									// 容器底部内容
-					],
-				),
+				child: this._tapWidgetOptions.elementAt(this._selectedIndex)
 			),
 		);
+	}
+
+	/**
+	 * 构造TAB ITEM按钮内容
+	 * @params icon 图标
+	 * @params color 图标颜色
+	 * @params label 文字
+	 * @params style 文样样式
+	 */
+	BottomNavigationBarItem getNavigationBarItem(IconData icon, Color color, String label, TextStyle style) {
+		return BottomNavigationBarItem(
+			icon: Icon(icon, color: color), title: Text(label, style: style)
+		);
+	}
+
+	/// TAB页面选中处理
+	void _onTabBarItemTapped(int index) {
+		this.setState(() {
+			this._selectedIndex = index;
+		});
 	}
 }
 
