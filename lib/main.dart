@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flighttickets/flight/styles/CustomeStyle.dart';
-import 'package:flighttickets/flight/styles/CustomeStyle.dart';
 import 'package:flighttickets/flight/routers/CustomRouterView.dart';
 
 /// 启动
