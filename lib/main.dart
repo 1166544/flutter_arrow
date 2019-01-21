@@ -54,7 +54,6 @@ class HomeScreenPageState extends State<HomeScreen> {
 			bottomNavigationBar: BottomNavigationBar(
 				items: this.bottomBarItems,
 				type: BottomNavigationBarType.fixed,
-				fixedColor: Colors.deepPurple,
 				currentIndex: this._selectedIndex,								// 当前选中页
 				onTap: this._onTabBarItemTapped,								// TAB选中处理
 			),

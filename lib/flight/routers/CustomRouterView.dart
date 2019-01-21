@@ -41,11 +41,11 @@ class CustomRouterView {
 		final TextStyle defaultBarItemStyle = TextStyle(fontStyle: FontStyle.normal, color: Colors.black);
 
 		// 选中样式
-		final TextStyle selectedBarItemStyle = defaultBarItemStyle.copyWith(color: appTheme.primaryColor);
+		// final TextStyle selectedBarItemStyle = defaultBarItemStyle.copyWith(color: appTheme.primaryColor);
 
 		// 返回列表
 		return [
-			this.getNavigationBarItem(Icons.home, appTheme.primaryColor, 'Explore', selectedBarItemStyle),
+			this.getNavigationBarItem(Icons.home, appTheme.primaryColor, 'Explore', defaultBarItemStyle),
 			this.getNavigationBarItem(Icons.favorite, appTheme.primaryColor, 'Whatlist', defaultBarItemStyle),
 			this.getNavigationBarItem(Icons.bookmark, appTheme.primaryColor, 'Deals', defaultBarItemStyle),
 			this.getNavigationBarItem(Icons.notifications, appTheme.primaryColor, 'Notifications', defaultBarItemStyle)
