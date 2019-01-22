@@ -6,7 +6,7 @@ import 'package:flighttickets/flight/pages/home/CustomHomeCity.dart';
 import 'dart:async';
 
 /// 底部布局
-class HomeScreenBottomPart  extends StatelessWidget {
+class HomeScreenBottomPart extends StatelessWidget {
 
 	StreamController<List<City>> _cities = new StreamController<List<City>>();
 
