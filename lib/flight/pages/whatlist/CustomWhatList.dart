@@ -7,10 +7,12 @@ class CustomWhatListPage extends StatelessWidget {
 	@override
 	Widget build(BuildContext context) {
 		// 拆分页面结构
-		return Column(children: <Widget>[
-			CustomDiscoverPart(),
-			CustomRecommendedPart(),
-			CustomFavoritePart()
-		]);
+		return Column(
+			children: <Widget>[
+				CustomDiscoverPart(),
+				CustomRecommendedPart(),
+				CustomFavoritePart()
+			],
+		);
 	}
 }
