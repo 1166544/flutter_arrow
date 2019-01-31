@@ -172,42 +172,16 @@ class CustomDiscoverPart extends StatelessWidget {
 	 * @param context 上下文
 	 */
     Widget buildTopNavMenu(BuildContext context) {
-		return StreamBuilder(
-			stream: this._locationsData.stream,
-			initialData: _initStremData(),
-			builder: (context, snapshot) {
-				if (snapshot.hasData) {
-					this.addLocations(context, snapshot.data);
-				}
-
-				return !snapshot.hasData
-				? Container()
-				: Padding(
-					padding: const EdgeInsets.all(16.0),
-					child: Row(
-						children: <Widget>[
-							Icon(Icons.location_on, color: Colors.white),
-							SizedBox(width: 16.0),
-							PopupMenuButton(																				// 下拉菜单选中
-								onSelected: (index) {
-									// setState(() {
-									// 	this.selectedLocationIndex = index;
-									// });
-								},
-								child: Row(																					// 下拉菜单按钮
-									children: <Widget>[
-										Text(this.locations[this.selectedLocationIndex], style: dropDownLabelStyle),
-										Icon(Icons.keyboard_arrow_down, color: Colors.white)
-									],
-								),
-								itemBuilder: (BuildContext context) => this._buildPopupMenuItem(),							//  创建下拉菜单
-							),
-							Spacer(),
-							Icon(Icons.settings, color: Colors.white)
-						],
-					),
-				);
-			},
+		return Column(
+			mainAxisAlignment: MainAxisAlignment.start,
+			mainAxisSize: MainAxisSize.min,
+			crossAxisAlignment: CrossAxisAlignment.start,
+			children: <Widget>[
+				Padding(
+					padding: const EdgeInsets.fromLTRB(8.0, 0.0, 0.0, 0.0),
+					child: Text('Discover', style: TextStyle(fontSize: 30, color: Color(0xff000000), fontWeight: FontWeight.bold)),
+				)
+			],
 		);
 	}
 

@@ -28,7 +28,7 @@ class HomeScreen extends StatefulWidget {
 class HomeScreenPageState extends State<HomeScreen> {
 
 	// 当前选中TAB
-	int _selectedIndex = 0;
+	int _selectedIndex = 1;
 
 	// TAB列表VIEW层数据
 	List<Widget> _tapWidgetOptions;
