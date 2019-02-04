@@ -47,24 +47,46 @@ class CustomDiscoverPart extends StatelessWidget {
 	Widget build(BuildContext context) {
 		return Stack(
 			children: <Widget>[
-				ClipPath(
-					clipper: CustomDiscoverClipper(),
-					child: Container(
-						height: 400.0,
-						decoration: BoxDecoration(
-							gradient: LinearGradient(colors: [firstColor, secondColor])
-						),
-						child: Column(
-							children: <Widget>[
-								Padding(
-									padding: EdgeInsets.fromLTRB(18.0, 40.0, 0, 0),
-									child: Text('Discover', style: TextStyle(fontSize: 38, fontWeight: FontWeight.bold)),
-								)
-							],
-						),
-					),
-				)
+				// 曲线背景和标题
+				this.buildDiscoverTitle(),
+				// 星空背景图片
+				this.buildBackground()
+
 			],
+		);
+	}
+
+	/**
+	 * 星空背景图片
+	 */
+	Widget buildBackground() {
+		return Padding(
+			padding: EdgeInsets.fromLTRB(20.0, 100.0, 20.0, 0),
+			child: Image.asset('assets/images/sky.png'),
+		);
+	}
+
+	/**
+	 * 曲线背景和标题
+	 */
+	Widget buildDiscoverTitle() {
+		return ClipPath(
+			clipper: CustomDiscoverClipper(),
+			child: Container(
+				height: 530.0,
+				decoration: BoxDecoration(
+					gradient: LinearGradient(colors: [firstColor, secondColor])
+				),
+				child: Row(
+					crossAxisAlignment: CrossAxisAlignment.start,
+					children: <Widget>[
+						Padding(
+							padding: EdgeInsets.fromLTRB(18.0, 38.0, 0, 0),
+							child: Text('Discover', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+						)
+					],
+				),
+			),
 		);
 	}
 
