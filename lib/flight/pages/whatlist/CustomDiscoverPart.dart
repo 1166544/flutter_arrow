@@ -101,10 +101,9 @@ class CustomDiscoverPart extends StatelessWidget {
 	 * 当前用户头像
 	 */
 	Widget buildCurrentUser() {
-		return Column(
-			mainAxisAlignment: MainAxisAlignment.start,
-			crossAxisAlignment: CrossAxisAlignment.start,
-			mainAxisSize: MainAxisSize.min,
+		return Row(
+			crossAxisAlignment: CrossAxisAlignment.center,
+			mainAxisSize: MainAxisSize.max,
 			children: <Widget>[
 				// 圆角头像
 				Stack(
@@ -127,6 +126,16 @@ class CustomDiscoverPart extends StatelessWidget {
 							),
 						)
 					],
+				),
+				Padding(
+					padding: EdgeInsets.symmetric(horizontal: 16.0),
+					child: Column(
+						crossAxisAlignment: CrossAxisAlignment.start,
+						children: <Widget>[
+							Text('Guided by', style: TextStyle(color: Colors.grey)),
+							Text('Jonathan William', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+						],
+					)
 				)
 			],
 		);
