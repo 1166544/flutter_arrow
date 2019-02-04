@@ -50,9 +50,33 @@ class CustomDiscoverPart extends StatelessWidget {
 				// 曲线背景和标题
 				this.buildDiscoverTitle(),
 				// 星空背景图片
-				this.buildBackground()
-
+				this.buildBackground(),
+				// 背景图片内容
+				this.buildBackgroundContent()
 			],
+		);
+	}
+
+	/**
+	 * 背景图片内容
+	 */
+	Widget buildBackgroundContent() {
+		return Padding(
+			padding: EdgeInsets.fromLTRB(45.0, 120.0, 50.0, 0),
+			child: Column(
+				children: <Widget>[
+					Text(
+						'Back to Nature Camping Under the Star',
+						style: TextStyle(
+							fontSize: 32,
+							fontWeight: FontWeight.bold,
+							color: Colors.white,
+							letterSpacing: 0,
+							height: 0.9
+						)
+					)
+				],
+			),
 		);
 	}
 
