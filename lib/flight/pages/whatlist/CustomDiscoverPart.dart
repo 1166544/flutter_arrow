@@ -56,14 +56,10 @@ class CustomDiscoverPart extends StatelessWidget {
 						),
 						child: Column(
 							children: <Widget>[
-								SizedBox(height: 50.0),
-								this.buildTopNavMenu(context),									// 顶部导航菜单
-								SizedBox(height: 50.0),
-								this.buildMainTitle(),											// 绘制主标题
-								SizedBox(height: 30.0),
-								this.buildSearchContainer(),									// 绘制搜索输入框
-								SizedBox(height: 20.0),
-								this.buildFlightSelectButton(),
+								Padding(
+									padding: EdgeInsets.fromLTRB(18.0, 40.0, 0, 0),
+									child: Text('Discover', style: TextStyle(fontSize: 38, fontWeight: FontWeight.bold)),
+								)
 							],
 						),
 					),
@@ -172,16 +168,8 @@ class CustomDiscoverPart extends StatelessWidget {
 	 * @param context 上下文
 	 */
     Widget buildTopNavMenu(BuildContext context) {
-		return Column(
-			mainAxisAlignment: MainAxisAlignment.start,
-			mainAxisSize: MainAxisSize.min,
-			crossAxisAlignment: CrossAxisAlignment.start,
-			children: <Widget>[
-				Padding(
-					padding: const EdgeInsets.fromLTRB(8.0, 0.0, 0.0, 0.0),
-					child: Text('Discover', style: TextStyle(fontSize: 30, color: Color(0xff000000), fontWeight: FontWeight.bold)),
-				)
-			],
+		return Container(
+			child: Text('Discover', style: TextStyle(fontSize: 30, color: Color(0xff000000), fontWeight: FontWeight.bold)),
 		);
 	}
 
