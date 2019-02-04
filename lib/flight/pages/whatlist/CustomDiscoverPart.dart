@@ -65,6 +65,7 @@ class CustomDiscoverPart extends StatelessWidget {
 			padding: EdgeInsets.fromLTRB(45.0, 120.0, 50.0, 0),
 			child: Column(
 				children: <Widget>[
+					// 主标题
 					Text(
 						'Back to Nature Camping Under the Star',
 						style: TextStyle(
@@ -74,9 +75,60 @@ class CustomDiscoverPart extends StatelessWidget {
 							letterSpacing: 0,
 							height: 0.9
 						)
-					)
+					),
+					// 地理位置
+					Padding(
+						padding: EdgeInsets.fromLTRB(0.0, 12.0, 0.0, 0.0),
+						child: Row(
+							children: <Widget>[
+							Icon(Icons.location_on, color: Colors.white, size: 19.0,),
+							Padding(
+								padding: EdgeInsets.symmetric(horizontal: 9.0),
+								child: Text('Labuan Bajo, NTT. Indonesia', style: TextStyle(color: Colors.white54)),
+							)
+						]),
+					),
+					// 占位高度
+					SizedBox(height: 180),
+					// 当前用户头像
+					this.buildCurrentUser()
 				],
 			),
+		);
+	}
+
+	/**
+	 * 当前用户头像
+	 */
+	Widget buildCurrentUser() {
+		return Column(
+			mainAxisAlignment: MainAxisAlignment.start,
+			crossAxisAlignment: CrossAxisAlignment.start,
+			mainAxisSize: MainAxisSize.min,
+			children: <Widget>[
+				// 圆角头像
+				Stack(
+					children: <Widget>[
+						ClipRRect(
+							borderRadius: BorderRadius.all(Radius.circular(50.0)),
+							child: Container(
+								width: 60,
+								height: 60,
+								color: Colors.grey,
+							)
+						),
+						Container(
+							width: 60,
+							height: 60,
+							padding: EdgeInsets.all(5),
+							child: ClipRRect(
+								borderRadius: BorderRadius.all(Radius.circular(50.0)),
+								child: Image.asset('assets/images/pic10.png', width: 45, height: 45)
+							),
+						)
+					],
+				)
+			],
 		);
 	}
 
