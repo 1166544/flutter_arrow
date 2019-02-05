@@ -8,7 +8,12 @@ class CommonAvata extends StatelessWidget {
 
 	@override
 	Widget build(BuildContext context) {
-		return Hero(
+		return this.getCustomAvataItem();
+	}
+
+  /// 圆角头像组件
+  Widget getCustomAvataItem() {
+    return Hero(
 			tag: 'assets/images/pic10.png',
 			child: Container(
 				width: 125,
@@ -22,5 +27,20 @@ class CommonAvata extends StatelessWidget {
 				),
 			),
 		);
-	}
+  }
+
+  /// 圆角搜索框
+  Widget getCustomSearchItem() {
+      return Material(
+          elevation: 10.0,
+          borderRadius: BorderRadius.circular(25.0),
+          child: TextFormField(
+              decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.search, color: Colors.black),
+                  contentPadding: EdgeInsets.only(left: 15.0, top: 15.0),
+                  hintText: 'Search for recipes and channels'
+              ),
+          ),
+      );
+  }
 }
