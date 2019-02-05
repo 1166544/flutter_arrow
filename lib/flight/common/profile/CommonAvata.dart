@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 /// 带圆角效果用户头像
@@ -11,87 +13,108 @@ class CommonAvata extends StatelessWidget {
 		return this.getCustomAvataItem();
 	}
 
-  /// 圆角头像组件
-  Widget getCustomAvataItem() {
-    return Hero(
-			tag: 'assets/images/pic10.png',
+	/// 模糊效果背景图片
+	Widget getBlurImageItem() {
+		return Padding(
+			padding: EdgeInsets.only(left: 12.0, right: 12.0),
 			child: Container(
-				width: 125,
-				height: 125,
+				height: 275.0,
 				decoration: BoxDecoration(
-					borderRadius: BorderRadius.circular(62.5),
-					image: DecorationImage(
-						fit: BoxFit.cover,
-						image: AssetImage('assets/imagesl/pic10.png')
-					)
+					borderRadius: BorderRadius.circular(15.0),
+					image: DecorationImage(image: AssetImage('assets/imagesl/pic10.png'), fit: BoxFit.cover)
+				),
+				// 背景模糊效果
+				child: BackdropFilter(
+					filter: ImageFilter.blur(sigmaX: 1.5, sigmaY: 1.5),
+					child: Container(
+						decoration: BoxDecoration(color: Colors.white.withOpacity(0.1))
+					),
 				),
 			),
 		);
-  }
+	}
 
-  /// 圆角搜索框
-  Widget getCustomSearchItem() {
-      return Material(
-          elevation: 10.0,
-          borderRadius: BorderRadius.circular(25.0),
-          child: TextFormField(
-              decoration: InputDecoration(
-				  border: InputBorder.none,	/// 去除外边框
-                  prefixIcon: Icon(Icons.search, color: Colors.black),
-                  contentPadding: EdgeInsets.only(left: 15.0, top: 15.0),
-                  hintText: 'Search for recipes and channels',
-				  hintStyle: TextStyle(color: Colors.grey)
-              ),
-          ),
-      );
-  }
+	/// 圆角头像组件
+	Widget getCustomAvataItem() {
+		return Hero(
+				tag: 'assets/images/pic10.png',
+				child: Container(
+					width: 125,
+					height: 125,
+					decoration: BoxDecoration(
+						borderRadius: BorderRadius.circular(62.5),
+						image: DecorationImage(
+							fit: BoxFit.cover,
+							image: AssetImage('assets/imagesl/pic10.png')
+						)
+					),
+				),
+			);
+	}
 
-  /// 构建引用组件（左边带竖线加右边带上下标题组件）
-  Widget getRefItem() {
-	  return Container(
-		  padding: EdgeInsets.only(left: 15.0),
-		  decoration: BoxDecoration(
-			  // 构建左边3宽度竖线
-			  border: Border(
-				  left: BorderSide(color: Colors.orange, style: BorderStyle.solid, width: 3.0)
-			  )
-		  ),
-		  child: Row(
-			  children: <Widget>[
-				  Column(
-					  crossAxisAlignment: CrossAxisAlignment.start,
-					  children: <Widget>[
-						  Text('POPULAR RECIPES', style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
-						  Text('THIS WEEK', style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
-					  ],
-				  )
-			  ],
-		  ),
-	  );
-  }
+	/// 圆角搜索框
+	Widget getCustomSearchItem() {
+		return Material(
+			elevation: 10.0,
+			borderRadius: BorderRadius.circular(25.0),
+			child: TextFormField(
+				decoration: InputDecoration(
+					border: InputBorder.none,	/// 去除外边框
+					prefixIcon: Icon(Icons.search, color: Colors.black),
+					contentPadding: EdgeInsets.only(left: 15.0, top: 15.0),
+					hintText: 'Search for recipes and channels',
+					hintStyle: TextStyle(color: Colors.grey)
+				),
+			),
+		);
+	}
 
-  /// 横向滚动容器
-  Widget getHorizontalScrollItem() {
-	  return Container(
-		  padding: EdgeInsets.only(top: 15.0, left: 15.0),
-		  height: 125.0,
-		  child: ListView(
-			  shrinkWrap: true,		// 兼容超出容器部份
-			  scrollDirection: Axis.horizontal,
-			  children: <Widget>[
-				  // ITEM CARD 容器
-				  this.getSubScrollItem(),
-				  SizedBox(width: 10.0),
-				  this.getSubScrollItem(),
-				  SizedBox(width: 10.0),
-				  this.getSubScrollItem(),
-			  ],
-		  ),
-	  );
-  }
+	/// 构建引用组件（左边带竖线加右边带上下标题组件）
+	Widget getRefItem() {
+		return Container(
+			padding: EdgeInsets.only(left: 15.0),
+			decoration: BoxDecoration(
+				// 构建左边3宽度竖线
+				border: Border(
+					left: BorderSide(color: Colors.orange, style: BorderStyle.solid, width: 3.0)
+				)
+			),
+			child: Row(
+				children: <Widget>[
+					Column(
+						crossAxisAlignment: CrossAxisAlignment.start,
+						children: <Widget>[
+							Text('POPULAR RECIPES', style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+							Text('THIS WEEK', style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+						],
+					)
+				],
+			),
+		);
+	}
 
-  /// 横向滚动卡片容器
-  Widget getSubScrollItem() {
+	/// 横向滚动容器
+	Widget getHorizontalScrollItem() {
+		return Container(
+			padding: EdgeInsets.only(top: 15.0, left: 15.0),
+			height: 125.0,
+			child: ListView(
+				shrinkWrap: true,		// 兼容超出容器部份
+				scrollDirection: Axis.horizontal,
+				children: <Widget>[
+					// ITEM CARD 容器
+					this.getSubScrollItem(),
+					SizedBox(width: 10.0),
+					this.getSubScrollItem(),
+					SizedBox(width: 10.0),
+					this.getSubScrollItem(),
+				],
+			),
+		);
+	}
+
+	/// 横向滚动卡片容器
+	Widget getSubScrollItem() {
 	  return Container(
 		height: 125.0,
 		width: 250.0,
@@ -146,6 +169,5 @@ class CommonAvata extends StatelessWidget {
 		),
 	);
   }
-
 
 }
