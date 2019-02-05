@@ -38,9 +38,34 @@ class CommonAvata extends StatelessWidget {
               decoration: InputDecoration(
                   prefixIcon: Icon(Icons.search, color: Colors.black),
                   contentPadding: EdgeInsets.only(left: 15.0, top: 15.0),
-                  hintText: 'Search for recipes and channels'
+                  hintText: 'Search for recipes and channels',
+				  hintStyle: TextStyle(color: Colors.grey)
               ),
           ),
       );
+  }
+
+  /// 构建引用组件（左边带竖线加右边带上下标题组件）
+  Widget getRefItem() {
+	  return Container(
+		  padding: EdgeInsets.only(left: 15.0),
+		  decoration: BoxDecoration(
+			  // 构建左边3宽度竖线
+			  border: Border(
+				  left: BorderSide(color: Colors.orange, style: BorderStyle.solid, width: 3.0)
+			  )
+		  ),
+		  child: Row(
+			  children: <Widget>[
+				  Column(
+					  crossAxisAlignment: CrossAxisAlignment.start,
+					  children: <Widget>[
+						  Text('POPULAR RECIPES', style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+						  Text('THIS WEEK', style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+					  ],
+				  )
+			  ],
+		  ),
+	  );
   }
 }
