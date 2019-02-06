@@ -15,7 +15,9 @@ class CustomFavoritePart extends StatelessWidget {
 					Text('CustomFavoritePart', style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
 					SizedBox(height: 20.0),
 					this.buildGuideItem(context, 'assets/images/pic6.png', 'Samantha William', 4.2, 86, 4, 1),
-					SizedBox(height: 20.0),
+					SizedBox(height: 10.0),
+					this.buildSeperateLine(),
+					SizedBox(height: 10.0),
 					this.buildGuideItem(context, 'assets/images/pic8.png', 'Jonathan Hope', 2.2, 86, 2, 2),
 					SizedBox(height: 20.0),
 					this.buildGuideItem(context, 'assets/images/pic9.png', 'Andrea Summers', 3.2, 86, 3, 3),
@@ -23,6 +25,21 @@ class CustomFavoritePart extends StatelessWidget {
 					this.buildGuideItem(context, 'assets/images/pic10.png', 'William Johnson', 4.2, 86, 4, 4),
 				],
 			),
+		);
+	}
+
+	/// 构建分割线
+	Widget buildSeperateLine() {
+		return Row(
+			children: <Widget>[
+				Container(width: 80.0, height: 0.5, color: Colors.white),
+				Container(
+					width: 270.0,
+					height: 0.5,
+					color: Colors.grey.withOpacity(0.5),
+					padding: EdgeInsets.only(top: 15.0),
+				),
+			],
 		);
 	}
 
