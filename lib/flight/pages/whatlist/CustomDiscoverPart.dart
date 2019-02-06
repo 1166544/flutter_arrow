@@ -100,10 +100,10 @@ class CustomDiscoverPart extends StatelessWidget {
 						Container(
 							width: 60,
 							height: 60,
-							padding: EdgeInsets.all(5),
+							padding: EdgeInsets.all(4),
 							child: ClipRRect(
 								borderRadius: BorderRadius.all(Radius.circular(50.0)),
-								child: Image.asset('assets/images/pic10.png', width: 45, height: 45)
+								child: Image.asset('assets/images/pic10.png', width: 50, height: 50)
 							),
 						)
 					],
