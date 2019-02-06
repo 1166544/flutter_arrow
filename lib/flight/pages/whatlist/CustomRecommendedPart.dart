@@ -30,6 +30,24 @@ class CustomRecommendedPart extends StatelessWidget {
 								this.buildScrollSubItem('assets/images/pic4.png', 'by Authr Smanntha', 'IDR 88.000'),
 							],
 						),
+					),
+					Padding(
+						padding: EdgeInsets.only(top: 40.0, bottom: 20.0),
+						child: Text('Favorite Activity', style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+					),
+					Container(
+						height: 200.0,
+						child: ListView(
+							shrinkWrap: true,	// 兼容超出容器处理
+							scrollDirection: Axis.horizontal, // 设定横向滚动
+							children: <Widget>[	// 子容器内容
+								this.buildScrollSubItem('assets/images/pic5.png', 'by Samantha William', 'IDR 55.000'),
+								SizedBox(width: 12.0),
+								this.buildScrollSubItem('assets/images/pic1.png', 'by Daniel Thomas', 'IDR 210.000'),
+								// SizedBox(width: 12.0),
+								// this.buildScrollSubItem('assets/images/pic2.png', 'by Kate Susan', 'IDR 67.000'),
+							],
+						),
 					)
 				],
 			),
