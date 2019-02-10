@@ -17,7 +17,7 @@ class CommonAvata extends StatelessWidget {
 	Widget getBlurImageItem() {
 		return Padding(
 			padding: EdgeInsets.only(left: 12.0, right: 12.0),
-			child: Container(
+			child: Container( 
 				height: 275.0,
 				decoration: BoxDecoration(
 					borderRadius: BorderRadius.circular(15.0),
