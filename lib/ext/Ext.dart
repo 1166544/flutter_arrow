@@ -5,9 +5,9 @@ class Ext extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return new MaterialApp(
-      title: title,
+      title: 'title',
       home: new Scaffold(
-          appBar: new AppBar(title: new Text(title)),
+          appBar: new AppBar(title: new Text('title')),
           body: this.getScaffoldBody(context)),
     );
   }
